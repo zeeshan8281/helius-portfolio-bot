@@ -1,44 +1,5 @@
 {
-  "asOf": "2026-10-28T06:22:02.244Z",
-  "runtime": "Node24.19.0",
-  "unitTests": {
-    "command": "node --test --test-reporter=dot",
-    "passed": 53,
-    "failed": 0
-  },
-  "realValidation": {
-    "finalizedReconciledPortfolioEntries": 3,
-    "inputUsdcAtomicEach": "650000",
-    "unsignedFullPositionExitSimulations": [
-      "ETH",
-      "HYPE",
-      "ZEC",
-      "SOL"
-    ],
-    "verifiedTokenAccountDepositRefundEachLamports": "1488440",
-    "monitorObserved": "Real RPC/quote cycles with persisted watching state; active process independently checked",
-    "latestConservativeNetEstimatedReturnBps": "-119",
-    "profitTargetEstablished": false
-  },
-  "notValidated": [
-    "Live portfolio liquidation and exit settlement",
-    "Crash-injection and stale-lock recovery end to end",
-    "24-hour monitoring uptime",
-    "5\u201310% realized profit",
-    "GitHub push or new Hashnode publication"
-  ],
-  "sourceSha256": {
-    "bot.mjs": "23ba02632c1b0d8c6e7427b1bc9aef9b353d31b6bca0d0657847fa6b555579ff",
-    "policy.mjs": "cc117ba8d24a6ea8292de6bf74d411ed4639452f3409d9cb5d8b8327dd0bd932",
-    "portfolio-accounting.mjs": "e38f76fe81d79d8afa9bed3ae12f9c1db8d1d9d7b065f1849f1ad9e372447871",
-    "portfolio-jupiter-decode.mjs": "5736f11f304a62e229e574cd895392c66f1d4e9bba7199a7365f1c11e3c10999",
-    "portfolio-mark.mjs": "bac5b08e4a5188f5c417071064511512337258b82d1d33619e029c448e74b238",
-    "portfolio-monitor.mjs": "46a756257934fb7edbd008bcbd04e8013b6a024779f05296da1975d12653464f",
-    "portfolio-observe.mjs": "c91c2fc0a44fec734f436a1cb2dd4bdedfa4f38bca485c112e15cad0edf1ea91",
-    "portfolio-policy.mjs": "60c40670a04256895ebe56e12307244df55a006658cb62b99f422737d340cbe1",
-    "portfolio-prepare.mjs": "a23a8db78f282ba1c44dd8f45df80bfbee1e6d585f9c361d24cd738b5c4b4202",
-    "portfolio-run.mjs": "d9f038f0704a65bab32bf2171f1c4f559678b7693d1b57610230acf0d723564b"
-  },
+  "runtime": "Node 24.19.0",
   "followUpValidation": [
     {
       "asOf": "2026-10-28T06:44:44Z",
@@ -48,5 +9,90 @@
       "newMonitorSha256": "de24dfeb8ae593e290f7cd9d8855f37c0441b79935097ccb46a11c51c57e7113",
       "liveFallbackEndToEnd": false
     }
-  ]
+  ],
+  "latestVerifiedAt": "2026-10-28T06:58:26.765Z",
+  "currentValidation": {
+    "unitTestsPassed": 54,
+    "realFinalizedEntries": 3,
+    "realFinalizedExits": 4,
+    "independentlyRefetchedFinalizedTransactions": 7,
+    "actualRefundsVerified": true,
+    "originalBaselinePreserved": true,
+    "monitorRecordedClosureBeforeDeadline": true,
+    "targetEstablished": false,
+    "historicalFundingReturnKnown": false,
+    "liveCrashInjectionTested": false,
+    "bridgeRedemptionTested": false,
+    "remotePushOrPublication": false
+  },
+  "historicalValidation": {
+    "asOf": "2026-10-28T06:22:02.244Z",
+    "unitTests": {
+      "command": "node --test --test-reporter=dot",
+      "passed": 53,
+      "failed": 0
+    },
+    "realValidation": {
+      "finalizedReconciledPortfolioEntries": 3,
+      "inputUsdcAtomicEach": "650000",
+      "unsignedFullPositionExitSimulations": [
+        "ETH",
+        "HYPE",
+        "ZEC",
+        "SOL"
+      ],
+      "verifiedTokenAccountDepositRefundEachLamports": "1488440",
+      "monitorObserved": "Real RPC/quote cycles with persisted watching state; active process independently checked",
+      "latestConservativeNetEstimatedReturnBps": "-119",
+      "profitTargetEstablished": false
+    },
+    "notValidated": [
+      "Live portfolio liquidation and exit settlement",
+      "Crash-injection and stale-lock recovery end to end",
+      "24-hour monitoring uptime",
+      "5\u201310% realized profit",
+      "GitHub push or new Hashnode publication"
+    ],
+    "sourceSha256": {
+      "bot.mjs": "23ba02632c1b0d8c6e7427b1bc9aef9b353d31b6bca0d0657847fa6b555579ff",
+      "policy.mjs": "cc117ba8d24a6ea8292de6bf74d411ed4639452f3409d9cb5d8b8327dd0bd932",
+      "portfolio-accounting.mjs": "e38f76fe81d79d8afa9bed3ae12f9c1db8d1d9d7b065f1849f1ad9e372447871",
+      "portfolio-jupiter-decode.mjs": "5736f11f304a62e229e574cd895392c66f1d4e9bba7199a7365f1c11e3c10999",
+      "portfolio-mark.mjs": "bac5b08e4a5188f5c417071064511512337258b82d1d33619e029c448e74b238",
+      "portfolio-monitor.mjs": "46a756257934fb7edbd008bcbd04e8013b6a024779f05296da1975d12653464f",
+      "portfolio-observe.mjs": "c91c2fc0a44fec734f436a1cb2dd4bdedfa4f38bca485c112e15cad0edf1ea91",
+      "portfolio-policy.mjs": "60c40670a04256895ebe56e12307244df55a006658cb62b99f422737d340cbe1",
+      "portfolio-prepare.mjs": "a23a8db78f282ba1c44dd8f45df80bfbee1e6d585f9c361d24cd738b5c4b4202",
+      "portfolio-run.mjs": "d9f038f0704a65bab32bf2171f1c4f559678b7693d1b57610230acf0d723564b"
+    }
+  },
+  "asOf": "2026-10-28T06:58:26.765Z",
+  "unitTests": {
+    "command": "node --test --test-reporter=dot",
+    "passed": 54,
+    "failed": 0
+  },
+  "sourceSha256": {
+    "bot.mjs": "23ba02632c1b0d8c6e7427b1bc9aef9b353d31b6bca0d0657847fa6b555579ff",
+    "policy.mjs": "cc117ba8d24a6ea8292de6bf74d411ed4639452f3409d9cb5d8b8327dd0bd932",
+    "portfolio-accounting.mjs": "e38f76fe81d79d8afa9bed3ae12f9c1db8d1d9d7b065f1849f1ad9e372447871",
+    "portfolio-jupiter-decode.mjs": "5736f11f304a62e229e574cd895392c66f1d4e9bba7199a7365f1c11e3c10999",
+    "portfolio-mark.mjs": "bac5b08e4a5188f5c417071064511512337258b82d1d33619e029c448e74b238",
+    "portfolio-monitor.mjs": "de24dfeb8ae593e290f7cd9d8855f37c0441b79935097ccb46a11c51c57e7113",
+    "portfolio-observe.mjs": "c91c2fc0a44fec734f436a1cb2dd4bdedfa4f38bca485c112e15cad0edf1ea91",
+    "portfolio-policy.mjs": "60c40670a04256895ebe56e12307244df55a006658cb62b99f422737d340cbe1",
+    "portfolio-prepare.mjs": "a23a8db78f282ba1c44dd8f45df80bfbee1e6d585f9c361d24cd738b5c4b4202",
+    "portfolio-run.mjs": "d9f038f0704a65bab32bf2171f1c4f559678b7693d1b57610230acf0d723564b"
+  },
+  "notValidated": [
+    "Live process-crash injection and stale-lock recovery",
+    "Bridge redemption",
+    "Profitable strategy or guaranteed loss cap",
+    "Sender, LaserStream, preconfirmations, or webhooks"
+  ],
+  "postCloseGuardChecks": {
+    "entryRefusedBeforeSigning": "Explicit unexpired authorization time required",
+    "monitorRestart": "previously-closed",
+    "monitorRestartCausedTrade": false
+  }
 }

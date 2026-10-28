@@ -1,0 +1,272 @@
+{
+  "state": "closed-and-independently-reconciled",
+  "verifiedAt": "2026-10-28T06:58:26.765Z",
+  "experimentStartedAt": "2026-10-28T06:10:29.672Z",
+  "revisedWindowStartedAt": "2026-10-28T06:27:43.000Z",
+  "requestedResultDeadline": "2026-10-28T06:57:43.000Z",
+  "closingCompletedAt": "2026-10-28T06:57:38.638Z",
+  "completedByRequestedDeadline": true,
+  "exitReason": "time-limit",
+  "baselineBidUsdcAtomic": "3664699",
+  "endingUsdcAtomic": "3169640",
+  "endingNativeSolLamports": "3025003",
+  "remainingTokenAccountDepositsLamports": "1488440",
+  "endingBidMarkedUsdcAtomic": "3629242",
+  "endingMinimumMarkedUsdcAtomic": "3626945",
+  "bidMarkedProfitUsdcAtomic": "-35457",
+  "bidMarkedReturnBps": "-96",
+  "conservativeMarkedReturnBps": "-103",
+  "targetBps": 1000,
+  "targetEstablished": false,
+  "actualNetworkFeesLamports": "265083",
+  "actualAccountRefundLamports": "4465320",
+  "receipts": [
+    {
+      "signature": "4qVmJR5nBwL5bQvQR4NyvKiTp9hNQS27kmDqHy1DskVkiGC37gVPyVRbJRKwP3PLH4r6LGNzFbfsSv2i4tkCresC",
+      "symbol": "ETH",
+      "direction": "entry",
+      "slot": 462370206,
+      "blockTime": 1793167902,
+      "inputAtomic": "650000",
+      "outputAtomic": "27626",
+      "networkFeeLamports": "5030",
+      "tokenAccountDepositLamports": "1488440",
+      "tokenAccountRefundLamports": "0",
+      "explorer": "https://solscan.io/tx/4qVmJR5nBwL5bQvQR4NyvKiTp9hNQS27kmDqHy1DskVkiGC37gVPyVRbJRKwP3PLH4r6LGNzFbfsSv2i4tkCresC"
+    },
+    {
+      "signature": "3dSgvmYp3JDm8UtGDibf1BR5ubj6hQSP1iW67qsD8eGKKHZu72CSjAW3BztQUUyzfNKyJ6jqZg8zPRbF31aCqZfP",
+      "symbol": "HYPE",
+      "direction": "entry",
+      "slot": 462371765,
+      "blockTime": 1793168234,
+      "inputAtomic": "650000",
+      "outputAtomic": "7982345",
+      "networkFeeLamports": "5056",
+      "tokenAccountDepositLamports": "1488440",
+      "tokenAccountRefundLamports": "0",
+      "explorer": "https://solscan.io/tx/3dSgvmYp3JDm8UtGDibf1BR5ubj6hQSP1iW67qsD8eGKKHZu72CSjAW3BztQUUyzfNKyJ6jqZg8zPRbF31aCqZfP"
+    },
+    {
+      "signature": "3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx",
+      "symbol": "ZEC",
+      "direction": "entry",
+      "slot": 462372203,
+      "blockTime": 1793168326,
+      "inputAtomic": "650000",
+      "outputAtomic": "49446",
+      "networkFeeLamports": "55000",
+      "tokenAccountDepositLamports": "1488440",
+      "tokenAccountRefundLamports": "0",
+      "explorer": "https://solscan.io/tx/3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx"
+    },
+    {
+      "signature": "MxgqU7R41zsN1F9CnjduBeuydJquoSAZWwfn1bPM94kbWg9iJZhdQBKZby5mcYpQ8iCXLuc1mVp8GMXpAJG4w3r",
+      "symbol": "ETH",
+      "direction": "exit",
+      "slot": 462382802,
+      "blockTime": 1793170582,
+      "inputAtomic": "27626",
+      "outputAtomic": "649272",
+      "networkFeeLamports": "55000",
+      "tokenAccountDepositLamports": "0",
+      "tokenAccountRefundLamports": "1488440",
+      "explorer": "https://solscan.io/tx/MxgqU7R41zsN1F9CnjduBeuydJquoSAZWwfn1bPM94kbWg9iJZhdQBKZby5mcYpQ8iCXLuc1mVp8GMXpAJG4w3r"
+    },
+    {
+      "signature": "4bavBFjsqtLsUwdMeKBZrtmuxeFQuSW7c8nsyeyjerZrR9oLH3CX5useVm7cu69jEmXT6FBY6AdpXffgY7PbQ9G7",
+      "symbol": "HYPE",
+      "direction": "exit",
+      "slot": 462382846,
+      "blockTime": 1793170592,
+      "inputAtomic": "7982345",
+      "outputAtomic": "647393",
+      "networkFeeLamports": "55000",
+      "tokenAccountDepositLamports": "0",
+      "tokenAccountRefundLamports": "1488440",
+      "explorer": "https://solscan.io/tx/4bavBFjsqtLsUwdMeKBZrtmuxeFQuSW7c8nsyeyjerZrR9oLH3CX5useVm7cu69jEmXT6FBY6AdpXffgY7PbQ9G7"
+    },
+    {
+      "signature": "4hcrpZXvoJxZWJ6FAGiptJKNRbNF1x8kVUBdw2f95STS9eEUx8uCsQCDmFvEpL6knAJAHUSFv2QVXesuRPK2MBMh",
+      "symbol": "ZEC",
+      "direction": "exit",
+      "slot": 462383117,
+      "blockTime": 1793170649,
+      "inputAtomic": "49446",
+      "outputAtomic": "645754",
+      "networkFeeLamports": "55000",
+      "tokenAccountDepositLamports": "0",
+      "tokenAccountRefundLamports": "1488440",
+      "explorer": "https://solscan.io/tx/4hcrpZXvoJxZWJ6FAGiptJKNRbNF1x8kVUBdw2f95STS9eEUx8uCsQCDmFvEpL6knAJAHUSFv2QVXesuRPK2MBMh"
+    },
+    {
+      "signature": "3W8dWdLvzzsKy97SAtX3Gj1d78VSnj4FWcEXECmRkfHnrMDY62voLaB3oEfJ2jbwqEoi8tokP6JvDRtCWXy7MGe9",
+      "symbol": "SOL",
+      "direction": "exit-sol",
+      "slot": 462383154,
+      "blockTime": 1793170657,
+      "inputAtomic": "11559073",
+      "outputAtomic": "1177221",
+      "networkFeeLamports": "34997",
+      "tokenAccountDepositLamports": "0",
+      "tokenAccountRefundLamports": "0",
+      "explorer": "https://solscan.io/tx/3W8dWdLvzzsKy97SAtX3Gj1d78VSnj4FWcEXECmRkfHnrMDY62voLaB3oEfJ2jbwqEoi8tokP6JvDRtCWXy7MGe9"
+    }
+  ],
+  "residualValuationLimit": "USDC and sale quantities/fees are actual finalized observations. Remaining SOL and token-account deposits retain quote values; total return is a marked portfolio return, not an all-USDC realized return.",
+  "historicalFundingReturn": null,
+  "finalMark": {
+    "schema": "helius-portfolio-mark-v1",
+    "observedAt": "2026-10-28T06:58:26.753Z",
+    "owner": "5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE",
+    "slot": 462383388,
+    "wallet": {
+      "addresses": [
+        "5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE",
+        "BAEseSTrwyTuX6CytNv8mob9y1Ab3YUdMWTmakWd1f46"
+      ],
+      "accounts": {
+        "5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE": {
+          "lamports": 3025003,
+          "data": [
+            "",
+            "base64"
+          ],
+          "owner": "11111111111111111111111111111111",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 0
+        },
+        "BAEseSTrwyTuX6CytNv8mob9y1Ab3YUdMWTmakWd1f46": {
+          "lamports": 1488440,
+          "data": [
+            "xvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWFBx9ZwZp2aHK13FHVyIakoKRN82BFcQbwbFnmgv5XpxWhdMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "base64"
+          ],
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "executable": false,
+          "rentEpoch": 18446744073709552000,
+          "space": 165
+        }
+      },
+      "tokenAccounts": {
+        "BAEseSTrwyTuX6CytNv8mob9y1Ab3YUdMWTmakWd1f46": {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "owner": "5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE",
+          "amountAtomic": "3169640",
+          "delegate": null,
+          "delegatedAmount": "0",
+          "closeAuthority": null,
+          "state": "initialized",
+          "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "lamports": "1488440",
+          "addressSpace": 165
+        }
+      },
+      "nativeLamports": "3025003",
+      "slot": 462383388
+    },
+    "holdings": [
+      {
+        "symbol": "USDC",
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "amountAtomic": "3169640"
+      },
+      {
+        "symbol": "SOL",
+        "mint": "So11111111111111111111111111111111111111112",
+        "amountAtomic": "3025003"
+      },
+      {
+        "symbol": "ETH",
+        "mint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+        "amountAtomic": "0"
+      },
+      {
+        "symbol": "HYPE",
+        "mint": "98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g",
+        "amountAtomic": "0"
+      },
+      {
+        "symbol": "ZEC",
+        "mint": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+        "amountAtomic": "0"
+      }
+    ],
+    "nativeLamports": "3025003",
+    "tokenRentLamports": "1488440",
+    "accountDeposits": [
+      {
+        "address": "BAEseSTrwyTuX6CytNv8mob9y1Ab3YUdMWTmakWd1f46",
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "amountAtomic": "3169640",
+        "lamports": "1488440"
+      }
+    ],
+    "quotes": [
+      {
+        "id": "holding:So11111111111111111111111111111111111111112",
+        "mint": "So11111111111111111111111111111111111111112",
+        "inputAtomic": "3025003",
+        "outUsdcAtomic": "308036",
+        "minOutUsdcAtomic": "306496",
+        "observedAtMs": 1793170703811,
+        "route": [
+          "TesseraV"
+        ]
+      },
+      {
+        "id": "account-deposits",
+        "mint": "So11111111111111111111111111111111111111112",
+        "inputAtomic": "1488440",
+        "outUsdcAtomic": "151566",
+        "minOutUsdcAtomic": "150809",
+        "observedAtMs": 1793170706112,
+        "route": [
+          "TesseraV"
+        ]
+      }
+    ],
+    "bidMarkedUsdcAtomic": "3629242",
+    "bidMinimumMarkedUsdcAtomic": "3626945",
+    "conservativeLiquidationUsdcAtomic": "3169640",
+    "gasReserveLamports": "3000000",
+    "feeBudgetLamports": "0",
+    "feeBudgetUsdcAtomic": "0",
+    "feeBudgetUsdcMethod": "Estimated ceil(network fee cap lamports \u00d7 full native SOL quote expected USDC / native lamports); not a paid fee or an executable conversion bound",
+    "accountDepositsBidUsdcAtomic": "151566",
+    "sellableNativeLamports": "0",
+    "withheldNativeLamports": "3025003",
+    "bidIncludesAccountDeposits": true,
+    "realizedReturn": null,
+    "confidence": "quote-only",
+    "limits": [
+      "Bid mark includes separately quoted token-account SOL deposits; their recovery is hypothetical until a close-account simulation proves it.",
+      "Spendable quote excludes locked gas and account deposits and withholds at most 60000 native lamports per required exit; the unused fee reserve remains SOL.",
+      "Quotes are neither fills nor verified executable liquidation. Setup, consolidation, account closure, and actual fees require complete simulation.",
+      "No reconciled run journal or capital-flow history is supplied; wallet changes cannot be attributed to trading rather than deposits or withdrawals."
+    ],
+    "baselineComparison": {
+      "file": "[private baseline path omitted]",
+      "sha256": "9a14f5039ff4b0afacef1d6991ac9eab6d43ba97c6e390b99cb9a4849839b64d",
+      "status": "unreconciled-wallet-change",
+      "adjustedTradingProfitUsdcAtomic": null,
+      "returnBps": null,
+      "reason": "Exact starting holdings or account deposits changed; a reconciled run journal and capital-flow history are required"
+    }
+  },
+  "journalReconciliation": {
+    "finalizedTransactionsIndependentlyRefetched": 7,
+    "finalizedWalletMatchedLastReceipt": true,
+    "unexplainedWalletChangesObserved": false,
+    "rawMarkComparisonLimit": "The standalone mark module compares an unchanged starting basket and has no trade journal. Its embedded baselineComparison reports basket changes; the independent transaction and wallet reconciliation above accounts for those actual trades."
+  },
+  "closingEvidence": {
+    "source": "Persisted live-monitor completion record using the local runtime clock",
+    "state": "positions-closed",
+    "completedAt": "2026-10-28T06:57:38.638Z",
+    "authorizationSha256": "d4efb2be5dfbbffd3cf6c4e600a6072ec27cbfe0a50f2a243e00b8e987052e4c",
+    "independentRefetchCompletedAt": "2026-10-28T06:58:26.765Z",
+    "limit": "Block times are not per-transaction finality-observed timestamps. Pre-deadline completion relies on the live monitor record; all transactions were independently re-fetched at finalized commitment afterward."
+  }
+}

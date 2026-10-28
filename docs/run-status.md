@@ -1,17 +1,36 @@
-# Live experiment status
+# Completed live experiment
 
-The user first approved a10%loss trigger or24-hour limit, then shortened the experiment to30minutes with a10%profit target and10%loss trigger. The immutable experiment baseline was recorded at2026-10-28T06:10:29.672Z: a quote mark of3.664699USDC including native SOL and token-account deposits. It is not the historical original-funding price or a realized cash amount. The final requested result deadline is2026-10-28T06:57:43.000Z. The monitor starts closing at06:56:13.000Z, reserving90seconds for four swaps and settlement. Protective exits remain allowed afterward if network delays prevent timely completion. The original baseline and all entry receipts remain unchanged.
+The run closed because its time limit expired. Neither the 10% gain nor 10% loss trigger fired. The final marked portfolio return was approximately −0.97%; this is a loss, not a successful profit strategy.
 
-Three real allocations finalized and reconciled against actual transaction metadata and finalized wallet accounts:
+| Event | UTC on 28 October 2026 |
+|---|---|
+| Original experiment baseline |06:10:29.672|
+| User changed the remaining window to 30 minutes |06:27:43.000|
+| Planned start of closing |06:56:13.000|
+| Monitor recorded all risk positions closed |06:57:38.638|
+| Requested result deadline |06:57:43.000|
+| Independent finalized transaction and wallet verification |06:58:26.765|
 
-| Asset | USDC spent | Asset received | Fee, SOL | Transaction |
-|---|---:|---:|---:|---|
-| Wormhole WETH |0.65|0.00027626|0.000005030|[Receipt](https://solscan.io/tx/4qVmJR5nBwL5bQvQR4NyvKiTp9hNQS27kmDqHy1DskVkiGC37gVPyVRbJRKwP3PLH4r6LGNzFbfsSv2i4tkCresC)|
-| Sunrise HYPE |0.65|0.007982345|0.000005056|[Receipt](https://solscan.io/tx/3dSgvmYp3JDm8UtGDibf1BR5ubj6hQSP1iW67qsD8eGKKHZu72CSjAW3BztQUUyzfNKyJ6jqZg8zPRbF31aCqZfP)|
-| OmniBridge ZEC |0.65|0.00049446|0.000055000|[Receipt](https://solscan.io/tx/3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx)|
+The amended window lasted 29 minutes 55.638 seconds through closure. The original P&L window lasted 47 minutes 8.966 seconds. The original baseline was preserved when the user changed the target and deadline. The pre-deadline completion timestamp comes from the live monitor record; later independent reads verified all seven transactions at finalized commitment. Block times alone do not establish when finality was observed.
 
-USDC remaining0.05; native SOL remaining0.010318753. Three new classic token accounts each hold0.001488440SOL deposits; these are separate from the fees. Closing each full token position was tested through a real unsigned simulation, including the exact deposit refund. The native SOL exit was also simulated, retaining its gas reserve. No actual sale has happened yet, so exit settlement and 5–10% profit remain unverified.
+| Portfolio observation | Value |
+|---|---:|
+| Starting bid mark |3.664699USDC|
+| Ending actual USDC |3.169640USDC|
+| Ending native SOL |0.003025003SOL|
+| Remaining USDC-account deposit |0.001488440SOL|
+| Ending bid mark |3.629242USDC|
+| Marked change |−0.035457USDC (−0.9675283%)|
+| Conservative minimum-mark return |−1.0302074%|
+| Actual network fees across seven transactions |0.000265083SOL|
+| Actual refunds from the three closed token accounts |0.004465320SOL|
 
-The monitor uses current full-position quotes, an estimated exit-fee allowance, and whole-portfolio value to trigger exits at an estimated10%gain,10%loss, or the shortened cutoff. A persistent stop blocks all later entries. Per-asset protective exits do not require successful portfolio-wide valuation. Quote values, closed positions, realized sale proceeds and residual SOL value remain distinct.
+The ending NAV includes quote values for residual SOL and its account deposit; it is not an all-USDC realized return. Entry and exit fees already reduced the actual wallet, so the marked return does not subtract them again. The return since original wallet funding remains unknown because the earlier funding-time SOL valuation was not captured.
 
-Operational limits: the local process needs this computer and network to remain available. A10% trigger is not a guarantee of maximum loss. Quote outages, unexpected wallet activity, unknown tokens, stale locks or unreconciled transactions can require investigation. Live crash recovery and actual sale settlement have not yet been exercised. No GitHub push or profit article has been published.
+See evidence/portfolio-result.json for all seven exact transaction signatures, actual amounts, fees, refunds, final holdings, and valuation limits. All entries and full exits finalized and reconciled. A separate read-only script fetched every transaction again and checked the actual input, output, native movement, fee, and account refund.
+
+Two closing preparations failed the associated-account policy and were rejected before signing. Fresh preparations later passed. A quote timed out during monitoring. The monitor tried another asset only after checking that all original intents remained safely resolved. No failed on-chain trade or duplicate signature replacement was used.
+
+The monitor and quote recorder have exited. The keep-awake process ended with the monitor. The authorization has expired, and a persistent stop prevents new entries. No further trade should run under these limits.
+
+Validation gaps: no live process-crash injection, stale-lock recovery test, or bridge redemption. These targeted checks and a single small mainnet experiment are not a full security audit or evidence of a repeatable strategy advantage. The 54 unit tests passed. The user subsequently authorized publishing the code and creating a Hashnode draft that reports the actual loss. The closed run remains stopped.

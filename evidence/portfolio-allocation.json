@@ -9,7 +9,7 @@
     "authorizedUntilISO": "2026-10-29T06:10:29.687Z",
     "lossIsTriggerNotGuarantee": true
   },
-  "state": "allocated-not-yet-profitable",
+  "state": "closed-target-not-met",
   "receipts": [
     {
       "state": "finalized-and-reconciled",
@@ -72,7 +72,12 @@
       "explorer": "https://solscan.io/tx/3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx"
     }
   ],
-  "finalReturn": null,
+  "finalReturn": {
+    "bidMarkedReturnBps": "-96",
+    "conservativeMarkedReturnBps": "-103",
+    "targetEstablished": false,
+    "valuation": "Residual SOL and account deposits remain quote-valued"
+  },
   "currentRisk": {
     "targetBps": 1000,
     "maxLossBps": 1000,
@@ -101,5 +106,6 @@
       "reason": "90-second liquidation/settlement buffer within the requested 30 minutes",
       "baselineUnchanged": true
     }
-  ]
+  ],
+  "finalResult": "portfolio-result.json"
 }

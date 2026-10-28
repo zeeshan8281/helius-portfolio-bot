@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="780" viewBox="0 0 1440 780">
+<rect width="1440" height="780" fill="#f7f8fa"/>
+<text x="64" y="84" font-family="Arial,sans-serif" font-size="40" fill="#17212b">Where the native SOL went</text>
+<text x="64" y="130" font-family="Arial,sans-serif" font-size="24" fill="#52636f">Actual accounting for three 0.65 USDC portfolio entries on 28 October 2026</text>
+<text x="64" y="211" font-family="Arial,sans-serif" font-size="29" fill="#17212b">Before: 0.014849159 SOL</text>
+<rect x="64.000" y="235" width="1312.000" height="72" fill="#b9c5d0"/>
+<text x="64" y="369" font-family="Arial,sans-serif" font-size="29" fill="#17212b">After: the same starting SOL, split into three destinations</text>
+<rect x="64.000" y="398" width="911.715" height="72" fill="#286a9b"/>
+<rect x="975.715" y="398" width="394.534" height="72" fill="#ed8a32"/>
+<rect x="1370.249" y="398" width="5.751" height="72" fill="#bc443c"/>
+<rect x="64.000" y="524" width="20.000" height="20" fill="#286a9b"/>
+<text x="64" y="588" font-family="Arial,sans-serif" font-size="23" fill="#17212b">Available native SOL</text>
+<text x="64" y="635" font-family="Arial,sans-serif" font-size="29" fill="#17212b">0.010318753 SOL</text>
+<rect x="524.000" y="524" width="20.000" height="20" fill="#ed8a32"/>
+<text x="524" y="588" font-family="Arial,sans-serif" font-size="23" fill="#17212b">New token-account deposits</text>
+<text x="524" y="635" font-family="Arial,sans-serif" font-size="29" fill="#17212b">0.004465320 SOL</text>
+<rect x="1000.000" y="524" width="20.000" height="20" fill="#bc443c"/>
+<text x="1000" y="588" font-family="Arial,sans-serif" font-size="23" fill="#17212b">Actual network fees</text>
+<text x="1000" y="635" font-family="Arial,sans-serif" font-size="29" fill="#17212b">0.000065086 SOL</text>
+<text x="64" y="718" font-family="Arial,sans-serif" font-size="22" fill="#52636f">Deposits remain in the accounts. Full-exit simulations verified their proposed refund;</text>
+<text x="64" y="752" font-family="Arial,sans-serif" font-size="22" fill="#52636f">a refund becomes an actual wallet receipt only after the closing transaction finalizes.</text>
+</svg>
