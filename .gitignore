@@ -1,0 +1,13 @@
+node_modules/
+.env*
+*.keypair.json
+bot-wallet.json
+config.json
+state/
+one-usdc-attempt.json
+portfolio-authorization.json
+portfolio-baseline.json
+portfolio-journal.json
+portfolio-stop.json
+portfolio-monitor-status.json
+*.lock

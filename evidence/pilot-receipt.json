@@ -1,0 +1,15 @@
+{
+  "signature": "3msvcbCPakKnZ3kpMTQdXDotoHR6UWNraTjjopo4kQNncbGNcwNTw236aYAH7L6TtWhH9yJFhxArF6AYcNsXPLmQ",
+  "state": "finalized-and-reconciled",
+  "slot": 462255992,
+  "blockTime": 1793143585,
+  "usdcSpentBaseUnits": "1000000",
+  "solReceivedBeforeNetworkFeeLamports": "9880691",
+  "networkFeeLamports": 31532,
+  "beforeSolLamports": "5000000",
+  "afterSolLamports": "14849159",
+  "remainingUsdcBaseUnits": "2000000",
+  "minimumOutputLamports": "9832277",
+  "quoteOutputLamports": "9881685",
+  "explorer": "https://solscan.io/tx/3msvcbCPakKnZ3kpMTQdXDotoHR6UWNraTjjopo4kQNncbGNcwNTw236aYAH7L6TtWhH9yJFhxArF6AYcNsXPLmQ"
+}

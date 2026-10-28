@@ -1,0 +1,29 @@
+{
+  "name": "helius-portfolio-experiment",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "balances": "node bot.mjs balances",
+    "simulate": "node bot.mjs simulate",
+    "execute": "node bot.mjs execute",
+    "status": "node bot.mjs status",
+    "portfolio:mark": "node portfolio-mark.mjs",
+    "portfolio:prepare": "node portfolio-prepare.mjs",
+    "portfolio:execute": "node portfolio-run.mjs execute",
+    "portfolio:recover": "node portfolio-run.mjs recover",
+    "portfolio:monitor": "node portfolio-monitor.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A small, evidence-driven Solana portfolio experiment using Helius RPC and Jupiter Swap V2",
+  "dependencies": {
+    "@solana/web3.js": "3.1.1",
+    "bs58": "6.0.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

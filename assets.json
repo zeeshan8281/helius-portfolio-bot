@@ -1,0 +1,212 @@
+{
+  "asOf": "2026-10-28",
+  "purpose": "Strict asset-identity research allowlist; not approval to trade",
+  "executionApproved": false,
+  "requiredBeforeExecution": [
+    "Fetch live Solana mint account owner, decimals, mint authority, freeze authority and extensions through Helius",
+    "Match exact mint addresses in both buy and exit quotes",
+    "Check exact-size bidirectional Jupiter quote economics including platform/LP/network fees and token-account rent",
+    "Inspect transaction instructions, simulate, preserve fee reserve and verify finalized deltas"
+  ],
+  "assets": [
+    {
+      "symbol": "SOL",
+      "displayName": "Native Solana SOL, using classic WSOL for token routes",
+      "chain": "Solana",
+      "mint": "So11111111111111111111111111111111111111112",
+      "identityStatus": "verified",
+      "approvedForIdentityAllowlist": true,
+      "representation": "Native SOL held in classic SPL Token Program WSOL accounts for swaps",
+      "decimals": 9,
+      "expectedTokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "primaryProofUrls": [
+        "https://solana.com/docs/tokens/basics/sync-native"
+      ],
+      "onchainMintCheckByThisResearcher": false,
+      "liveMetadata": {
+        "mint": "So11111111111111111111111111111111111111112",
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "decimals": 9,
+        "freezeAuthority": null,
+        "isInitialized": true,
+        "mintAuthority": null,
+        "supply": "0",
+        "observedAt": "2026-10-27T23:39:40.709Z",
+        "slot": 462259726,
+        "source": "Helius getMultipleAccounts finalized"
+      },
+      "expectedMintAuthority": null
+    },
+    {
+      "symbol": "ETH",
+      "routeSymbol": "WETH",
+      "displayName": "Wormhole Wrapped Ether",
+      "chain": "Solana",
+      "mint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+      "identityStatus": "verified",
+      "approvedForIdentityAllowlist": true,
+      "originChain": "Ethereum",
+      "representation": "Wormhole Wrapped Token Transfers representation backed by locked Ethereum-origin asset under the bridge model",
+      "decimals": 8,
+      "decimalsEvidence": "Official Wormhole mainnet SDK token constants",
+      "expectedTokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "documentedMintAuthority": null,
+      "documentedFreezeAuthority": null,
+      "primaryProofUrls": [
+        "https://github.com/wormhole-foundation/wormhole-sdk-ts/blob/479df45f0a11684a13174189851c00e19b536a4a/core/base/src/constants/tokens/mainnet.ts",
+        "https://docs.sunrise.xyz/resources/listed-assets.md",
+        "https://docs.wormhole.com/products/token-transfers/wrapped-token-transfers/overview/"
+      ],
+      "onchainMintCheckByThisResearcher": false,
+      "bridgeRedemptionTested": false,
+      "liveMetadata": {
+        "mint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "decimals": 8,
+        "freezeAuthority": null,
+        "isInitialized": true,
+        "mintAuthority": "BCD75RNBHrJJpW4dXVagL5mPjzRLnVZq4YirJdjEYMV7",
+        "supply": "4606245694968",
+        "observedAt": "2026-10-27T23:39:40.716Z",
+        "slot": 462259726,
+        "source": "Helius getMultipleAccounts finalized"
+      },
+      "expectedMintAuthority": "BCD75RNBHrJJpW4dXVagL5mPjzRLnVZq4YirJdjEYMV7"
+    },
+    {
+      "symbol": "HYPE",
+      "displayName": "HYPE via Sunrise / Wormhole NTT",
+      "chain": "Solana",
+      "mint": "98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g",
+      "identityStatus": "verified",
+      "approvedForIdentityAllowlist": true,
+      "originChain": "HyperEVM",
+      "bridgeFramework": "Wormhole NTT",
+      "listedAt": "2026-01-29",
+      "decimals": 9,
+      "reportedExplorerDecimalsUnverifiedOnchain": 9,
+      "expectedTokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "documentedMintAuthority": "3X46pk5u5gLfppNRyPF5PcKyuHYrA2pHnyJK5HRLPzfi",
+      "documentedMetadataUpdateAuthority": "NGoD1yTeq5KaURrZo7MnCTFzTA4g62ygakJCnzMLCfm",
+      "documentedFreezeAuthority": null,
+      "primaryProofUrls": [
+        "https://docs.sunrise.xyz/resources/listed-assets.md",
+        "https://docs.sunrise.xyz/concepts/infrastructure-and-security.md",
+        "https://docs.sunrise.xyz/guides/withdraw-from-solana.md"
+      ],
+      "onchainMintCheckByThisResearcher": false,
+      "bridgeRedemptionTested": false,
+      "documentationRetrieval": "Public HTTPS GET with ordinary browser User-Agent; web extraction tool failed",
+      "liveMetadata": {
+        "mint": "98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g",
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "decimals": 9,
+        "freezeAuthority": null,
+        "isInitialized": true,
+        "mintAuthority": "3X46pk5u5gLfppNRyPF5PcKyuHYrA2pHnyJK5HRLPzfi",
+        "supply": "666858655782983",
+        "observedAt": "2026-10-27T23:39:40.716Z",
+        "slot": 462259726,
+        "source": "Helius getMultipleAccounts finalized"
+      },
+      "expectedMintAuthority": "3X46pk5u5gLfppNRyPF5PcKyuHYrA2pHnyJK5HRLPzfi"
+    },
+    {
+      "symbol": "ZEC",
+      "displayName": "Omni Bridge Zcash / NEAR Intents ZEC on Solana",
+      "chain": "Solana",
+      "mint": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+      "identityStatus": "verified",
+      "approvedForIdentityAllowlist": true,
+      "originChain": "Zcash, via zec.omft.near on NEAR",
+      "bridgeFramework": "NEAR Omni Bridge / NEAR Intents",
+      "nearTokenId": "zec.omft.near",
+      "announcementAt": "2026-10-16T16:00:44Z",
+      "decimals": 8,
+      "originDecimals": 8,
+      "expectedTokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "documentedMintAuthority": null,
+      "documentedFreezeAuthority": null,
+      "primaryProofUrls": [
+        "https://x.com/sunrise/status/2111125195838591424",
+        "https://x.com/sunrise/status/2111125200112963684",
+        "https://github.com/Near-One/omni-bridge/blob/main/near/omni-bridge/src/lib.rs",
+        "https://docs.near.org/chain-abstraction/omnibridge/overview"
+      ],
+      "announcementAccessLimitation": "X returned403; full official authored posts read through public api.fxtwitter.com mirror and exact identity independently confirmed against live finalized official bridge registry",
+      "announcementMirrors": [
+        "https://api.fxtwitter.com/status/2111125195838591424",
+        "https://api.fxtwitter.com/status/2111125200112963684"
+      ],
+      "bridgeRegistryEvidence": {
+        "endpoint": "https://rpc.mainnet.near.org",
+        "rpcMethod": "query",
+        "requestType": "call_function",
+        "accountId": "omni.bridge.near",
+        "finality": "final",
+        "observedOn": "2026-10-28",
+        "calls": [
+          {
+            "methodName": "get_token_id",
+            "args": {
+              "address": "sol:A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS"
+            },
+            "result": "zec.omft.near",
+            "blockHeight": 221895078,
+            "blockHash": "9qwBRZvXLmZaBDYqrNJBsfpC8viuViiooDwAhG4WsYXN"
+          },
+          {
+            "methodName": "get_token_address",
+            "args": {
+              "chain_kind": "Sol",
+              "token": "zec.omft.near"
+            },
+            "result": "sol:A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+            "blockHeight": 221895085,
+            "blockHash": "E4QUGeQ5ximfDMwK3gspyMRSgRuSD1NPrHSQenTZa7FH"
+          },
+          {
+            "methodName": "get_token_decimals",
+            "args": {
+              "address": "sol:A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS"
+            },
+            "result": {
+              "decimals": 8,
+              "origin_decimals": 8
+            },
+            "blockHeight": 221895092,
+            "blockHash": "4UibRUrmudxXaCGLE496eXm1iFG7urNnbWzeoDgJqkp5"
+          }
+        ]
+      },
+      "onchainSolanaMintCheckByThisResearcher": false,
+      "bridgeRedemptionTested": false,
+      "shieldedZcashBalance": false,
+      "liveMetadata": {
+        "mint": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS",
+        "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "decimals": 8,
+        "freezeAuthority": null,
+        "isInitialized": true,
+        "mintAuthority": "FvULawNPGBbuwYus74ECaQoV1oH9Tk6XPN7VPN51NYds",
+        "supply": "10278277725924",
+        "observedAt": "2026-10-27T23:39:40.716Z",
+        "slot": 462259726,
+        "source": "Helius getMultipleAccounts finalized"
+      },
+      "expectedMintAuthority": "FvULawNPGBbuwYus74ECaQoV1oH9Tk6XPN7VPN51NYds"
+    }
+  ],
+  "usdcMetadata": {
+    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "decimals": 6,
+    "freezeAuthority": "7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar",
+    "isInitialized": true,
+    "mintAuthority": "BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG",
+    "supply": "7589528577083481",
+    "observedAt": "2026-10-27T23:39:40.716Z",
+    "slot": 462259726,
+    "source": "Helius getMultipleAccounts finalized"
+  }
+}

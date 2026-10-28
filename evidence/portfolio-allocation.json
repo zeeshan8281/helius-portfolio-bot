@@ -1,0 +1,76 @@
+{
+  "experimentStart": "2026-10-28T06:10:29.672Z",
+  "baselineBidUsdcAtomic": "3664699",
+  "baselineValuation": "Quote mark including native SOL and token-account deposits; not original pilot funding-time value",
+  "owner": "5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE",
+  "risk": {
+    "maxLossBps": 1000,
+    "targetBps": 500,
+    "authorizedUntilISO": "2026-10-29T06:10:29.687Z",
+    "lossIsTriggerNotGuarantee": true
+  },
+  "state": "allocated-not-yet-profitable",
+  "receipts": [
+    {
+      "state": "finalized-and-reconciled",
+      "signature": "4qVmJR5nBwL5bQvQR4NyvKiTp9hNQS27kmDqHy1DskVkiGC37gVPyVRbJRKwP3PLH4r6LGNzFbfsSv2i4tkCresC",
+      "slot": 462370206,
+      "blockTime": 1793167902,
+      "symbol": "ETH",
+      "direction": "entry",
+      "effects": {
+        "beforeInput": "2000000",
+        "afterInput": "1350000",
+        "beforeOutput": "0",
+        "afterOutput": "27626",
+        "beforeSol": "14849159",
+        "afterSol": "13355689",
+        "newOutputAtaRentLamports": "1488440",
+        "verifiedInputAtaRefundLamports": "0",
+        "networkFeeLamports": "5030"
+      },
+      "explorer": "https://solscan.io/tx/4qVmJR5nBwL5bQvQR4NyvKiTp9hNQS27kmDqHy1DskVkiGC37gVPyVRbJRKwP3PLH4r6LGNzFbfsSv2i4tkCresC"
+    },
+    {
+      "state": "finalized-and-reconciled",
+      "signature": "3dSgvmYp3JDm8UtGDibf1BR5ubj6hQSP1iW67qsD8eGKKHZu72CSjAW3BztQUUyzfNKyJ6jqZg8zPRbF31aCqZfP",
+      "slot": 462371765,
+      "blockTime": 1793168234,
+      "symbol": "HYPE",
+      "direction": "entry",
+      "effects": {
+        "beforeInput": "1350000",
+        "afterInput": "700000",
+        "beforeOutput": "0",
+        "afterOutput": "7982345",
+        "beforeSol": "13355689",
+        "afterSol": "11862193",
+        "newOutputAtaRentLamports": "1488440",
+        "verifiedInputAtaRefundLamports": "0",
+        "networkFeeLamports": "5056"
+      },
+      "explorer": "https://solscan.io/tx/3dSgvmYp3JDm8UtGDibf1BR5ubj6hQSP1iW67qsD8eGKKHZu72CSjAW3BztQUUyzfNKyJ6jqZg8zPRbF31aCqZfP"
+    },
+    {
+      "state": "finalized-and-reconciled",
+      "signature": "3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx",
+      "slot": 462372203,
+      "blockTime": 1793168326,
+      "symbol": "ZEC",
+      "direction": "entry",
+      "effects": {
+        "beforeInput": "700000",
+        "afterInput": "50000",
+        "beforeOutput": "0",
+        "afterOutput": "49446",
+        "beforeSol": "11862193",
+        "afterSol": "10318753",
+        "newOutputAtaRentLamports": "1488440",
+        "verifiedInputAtaRefundLamports": "0",
+        "networkFeeLamports": "55000"
+      },
+      "explorer": "https://solscan.io/tx/3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx"
+    }
+  ],
+  "finalReturn": null
+}
