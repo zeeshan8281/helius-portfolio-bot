@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-28T11:07:53.385Z",
+  "node": "v24.22.1",
+  "archiveSha256": "679e47eac0c333b863d9e98ceb86a2a46626b062928d9ffe0f2ff57469c3e2ee",
+  "version": "0.1.2",
+  "cleanGlobalArchiveInstall": true,
+  "realHeliusDoctor": true,
+  "completedTradeRefusedWithoutMutatingAttempt": true,
+  "originalSignatureStatusReconciled": true,
+  "realInstalledCompare": {
+    "seconds": 30,
+    "notifications": 124,
+    "reconnects": 1,
+    "httpErrors": 0
+  },
+  "realInstalledWatch": true,
+  "testsPassed": 65
+}

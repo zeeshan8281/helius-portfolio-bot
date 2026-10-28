@@ -13,7 +13,7 @@ Read [the detailed experiment walkthrough](docs/experiment.md) for the code path
 Requires Node.js 24 or newer. Install the tested npm archive from the GitHub release:
 
 ```sh
-npm install -g https://github.com/zeeshan8281/helius-portfolio-bot/releases/download/v0.1.1/helius-portfolio-bot-0.1.1.tgz
+npm install -g https://github.com/zeeshan8281/helius-portfolio-bot/releases/download/v0.1.2/helius-portfolio-bot-0.1.2.tgz
 helius-bot init
 helius-bot doctor
 helius-bot balances
@@ -31,6 +31,17 @@ helius-bot --help
 ```
 
 These inspect, quote, or simulate. They do not sign. Watch-only mode refuses trading and authorization.
+
+## WebSocket observation and comparison
+
+```sh
+helius-bot watch --seconds 60
+helius-bot compare --seconds 120 --disconnect-after 40 --output comparison.json
+```
+
+`watch` streams the configured native SOL account; `--account` selects a token or other account. `compare` observes the changing Clock sysvar through WebSocket and HTTP on the same machine, at matching commitment. It records matched-state arrival differences, skipped states, and reconnects. Neither command signs a transaction. Current-state snapshots after reconnect do not replay missed events.
+
+`helius-bot stream-trade --live` is a separate real-money demonstration: one 1 USDC -> SOL swap with confirmed/finalized signature subscriptions, account updates, HTTP polling, and finalized reconciliation. It requires a local wallet. `helius-bot stream-status` observes the original signature without a replacement. Read the [commands, limits and recovery details](docs/websockets.md) before using it.
 
 ## Explicit live run
 
@@ -63,7 +74,7 @@ The release uses `npm-shrinkwrap.json` to pin its dependency tree. It has no ins
 npm ci
 npm test
 npm pack
-npm install -g ./helius-portfolio-bot-0.1.1.tgz
+npm install -g ./helius-portfolio-bot-0.1.2.tgz
 helius-bot --version
 ```
 

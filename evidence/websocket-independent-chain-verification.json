@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-28T11:04:04.930Z",
+  "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+  "commitment": "finalized",
+  "slot": 462451503,
+  "metaError": null,
+  "usdcSpentAtomic": "1000000",
+  "solReceivedBeforeFeeLamports": "9729585",
+  "networkFeeLamports": 32094,
+  "remainingSolLamports": 12722494,
+  "remainingUsdcAtomic": "2169640",
+  "allFourSubscriptionNotificationsMatchReceiptSlot": true
+}

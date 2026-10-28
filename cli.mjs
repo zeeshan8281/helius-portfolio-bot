@@ -13,6 +13,10 @@ import manifest from './package.json' with { type: 'json' };
 const help = `helius-bot ${manifest.version} (Node.js 24+)
 
   init [--wallet ADDRESS | --generate-wallet]  Set up a watch-only or new local wallet
+  watch [--account ADDRESS] [--seconds N]      Stream account updates without signing
+  compare [--account ADDRESS] [--seconds N]    Compare WebSocket with 2s HTTP polling
+  stream-trade --live                         One 1 USDC -> SOL swap with both observers
+  stream-status                              Observe that swap; never sign a replacement
   doctor                                      Check setup and real Helius connectivity
   balances                                    Read finalized SOL and USDC balances
   mark                                        Quote the portfolio without signing
@@ -146,14 +150,17 @@ export async function main(args = process.argv.slice(2)) {
   if (Number(process.versions.node.split('.')[0]) < 24) throw Error('helius-bot requires Node.js 24 or newer.');
   const { values, positionals } = parseArgs({ args, allowPositionals: true, options: {
     home: { type: 'string' }, wallet: { type: 'string' }, 'generate-wallet': { type: 'boolean' },
-    live: { type: 'boolean' }, exit: { type: 'boolean' }, refresh: { type: 'boolean' }, minutes: { type: 'string' },
+    live: { type: 'boolean' }, 'retry-expired': { type: 'boolean' }, exit: { type: 'boolean' }, refresh: { type: 'boolean' }, minutes: { type: 'string' },
     'max-loss-percent': { type: 'string' }, 'target-percent': { type: 'string' },
+    account: { type: 'string' }, seconds: { type: 'string' }, 'poll-ms': { type: 'string' },
+    'disconnect-after': { type: 'string' }, output: { type: 'string' },
     help: { type: 'boolean', short: 'h' }, version: { type: 'boolean', short: 'v' },
   } });
   if (values.help || !positionals.length && !values.version) return console.log(help);
   if (values.version) return console.log(manifest.version);
   const [command, symbol] = positionals;
   const allowed = { init: ['wallet', 'generate-wallet'], doctor: [], balances: [], mark: [], prepare: ['exit'], baseline: ['refresh'],
+    watch: ['account', 'seconds', 'output'], compare: ['account', 'seconds', 'poll-ms', 'disconnect-after', 'output'], 'stream-trade': ['live', 'retry-expired'], 'stream-status': [],
     authorize: ['live', 'minutes', 'max-loss-percent', 'target-percent'], trade: ['live'], exit: ['live'], monitor: ['live'], recover: [], stop: [], status: [] };
   if (!Object.hasOwn(allowed, command)) throw Error('Unknown command. Run helius-bot --help.');
   if (positionals.length !== (['prepare', 'trade', 'exit'].includes(command) ? 2 : 1)) throw Error('Unexpected or missing command arguments. Run helius-bot --help.');
@@ -170,6 +177,36 @@ export async function main(args = process.argv.slice(2)) {
   if (['prepare', 'trade', 'exit'].includes(command) && !['ETH', 'HYPE', 'ZEC', 'SOL'].includes(symbol)) throw Error('Use the exact symbol ETH, HYPE, ZEC, or SOL.');
   if (command === 'trade' && symbol === 'SOL') throw Error('The fixed allocation retains existing SOL; trade opens only ETH, HYPE, or ZEC.');
   if (command === 'prepare' && symbol === 'SOL' && !values.exit) throw Error('SOL preparation requires --exit.');
+  if (command === 'watch' || command === 'compare') {
+    const integer = (value, fallback, min, max, label) => {
+      const n = Number(value ?? fallback);
+      if (!/^\d+$/.test(String(value ?? fallback)) || !Number.isSafeInteger(n) || n < min || n > max) throw Error(`Invalid ${label}: use ${min}..${max}.`);
+      return n;
+    };
+    const seconds = integer(values.seconds, 60, 1, 600, 'seconds');
+    const pollMs = integer(values['poll-ms'], 2000, 250, 30000, 'poll-ms');
+    const disconnectAfter = integer(values['disconnect-after'], 0, 0, seconds-1, 'disconnect-after');
+    const { CLOCK, observeAccount } = await import('./helius-stream.mjs');
+    const account = new PublicKey(values.account ?? (command === 'compare' ? CLOCK : config.owner)).toBase58();
+    let outputFd;
+    if (values.output) outputFd = fs.openSync(path.resolve(values.output), 'wx', 0o600);
+    const controller = new AbortController(); const stop = () => controller.abort();
+    process.once('SIGINT', stop); process.once('SIGTERM', stop);
+    try {
+      const report = await observeAccount({ apiKey: config.heliusApiKey, account, seconds, pollMs, disconnectAfter, compare: command === 'compare', signal: controller.signal });
+      if (outputFd !== undefined) { fs.writeFileSync(outputFd, JSON.stringify(report, null, 2)+'\n'); fs.fsyncSync(outputFd); }
+    } finally { if (outputFd !== undefined) fs.closeSync(outputFd); process.off('SIGINT', stop); process.off('SIGTERM', stop); }
+    return;
+  }
+  if (command === 'stream-status') {
+    const { streamStatus } = await import('./stream-trade.mjs');
+    return console.log(JSON.stringify(await streamStatus(), null, 2));
+  }
+  if (command === 'stream-trade') {
+    if (!values.live || config.mode !== 'local') throw Error('stream-trade requires a local signing wallet and explicit --live.');
+    const { streamTrade } = await import('./stream-trade.mjs');
+    return streamTrade({ apiKey: config.heliusApiKey, live: values.live, retryExpired: values['retry-expired'] });
+  }
   if (command === 'authorize') return authorize(home, config, values);
   if (command === 'doctor' || command === 'balances') {
     const { rpc, balances } = await import('./bot.mjs');

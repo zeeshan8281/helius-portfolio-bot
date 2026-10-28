@@ -1,6 +1,6 @@
 {
   "name": "helius-portfolio-bot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "scripts": {
     "test": "node --test",
@@ -24,10 +24,11 @@
   ],
   "author": "Zeeshan",
   "license": "ISC",
-  "description": "A small, evidence-driven Solana portfolio experiment using Helius RPC and Jupiter Swap V2",
+  "description": "A guarded Solana portfolio CLI with Helius RPC, WebSocket observation and Jupiter swaps",
   "dependencies": {
     "@solana/web3.js": "3.1.1",
-    "bs58": "6.0.0"
+    "bs58": "6.0.0",
+    "ws": "8.22.0"
   },
   "engines": {
     "node": ">=24"
@@ -52,7 +53,9 @@
     "docs/",
     "evidence/",
     "LICENSE",
-    "npm-shrinkwrap.json"
+    "npm-shrinkwrap.json",
+    "helius-stream.mjs",
+    "stream-trade.mjs"
   ],
   "repository": {
     "type": "git",

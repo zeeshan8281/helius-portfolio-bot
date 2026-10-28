@@ -1,0 +1,18 @@
+{
+  "signature": "QNd1aULorFQ3gUR9Sn7pZFhn4Vj8xzn71QmQopjXCuo5FXmHLhSttVJtcWsLrzz8weoeBfM4vdKQJNbap5F6pcG",
+  "state": "expired-unspent",
+  "expiryProof": {
+    "checkedAt": "2026-10-28T11:00:08.724Z",
+    "blockhashValid": false,
+    "transactionAbsent": true,
+    "unchangedWallet": {
+      "address": "5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE",
+      "solLamports": 3025003,
+      "usdcBaseUnits": "3169640",
+      "accounts": [
+        "BAEseSTrwyTuX6CytNv8mob9y1Ab3YUdMWTmakWd1f46"
+      ],
+      "slot": 462451467
+    }
+  }
+}

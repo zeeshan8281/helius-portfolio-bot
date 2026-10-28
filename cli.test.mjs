@@ -60,6 +60,10 @@ test('watch-only init creates private config for the requested wallet, never a s
   }
   assert.equal(run(home, ['trade', 'ETH', '--live']).status, 1);
   assert.equal(run(home, ['monitor', '--live']).status, 1);
+  assert.equal(run(home, ['stream-trade', '--live']).status, 1);
+  assert.equal(run(home, ['watch', '--seconds', '0']).status, 1);
+  assert.equal(run(home, ['compare', '--seconds', '1', '--disconnect-after', '1']).status, 1);
+  assert.equal(run(home, ['compare', '--poll-ms', '1']).status, 1);
   assert.equal(run(home, ['authorize', '--live', '--minutes', '30', '--max-loss-percent', '10', '--target-percent', '5']).status, 1);
   assert.deepEqual(fs.readdirSync(home), ['config.json']);
 });

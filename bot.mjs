@@ -176,7 +176,7 @@ async function executeCommand(retryExpired = false) {
     await execute();
   } finally { fs.unlinkSync(lock); }
 }
-export { rpc, requestBuild, transaction as buildTransaction, balances, owner, dir as stateDir };
+export { rpc, requestBuild, transaction as buildTransaction, balances, owner, dir as stateDir, prepare, status, settle };
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
 try {

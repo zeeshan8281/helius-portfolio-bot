@@ -1,0 +1,574 @@
+{
+  "schema": "helius-stream-comparison-v1",
+  "account": "SysvarC1ock11111111111111111111111111111111",
+  "commitment": "confirmed",
+  "startedAt": "2026-10-28T10:54:02.678Z",
+  "seconds": 15,
+  "pollMs": 2000,
+  "compare": true,
+  "completed": true,
+  "streamFailure": false,
+  "httpRequests": 9,
+  "httpErrors": 0,
+  "reconciliations": 2,
+  "stream": {
+    "connections": 2,
+    "reconnects": 1,
+    "acknowledgements": 2,
+    "notifications": 59,
+    "bytes": 20559
+  },
+  "summary": {
+    "uniqueWebsocketStates": 59,
+    "uniqueHttpStates": 7,
+    "matchedStates": 5,
+    "websocketOnlyStates": 54,
+    "httpOnlyStates": 2,
+    "websocketFirstPairs": 2,
+    "httpFirstPairs": 3,
+    "medianHttpMinusWebsocketMs": -42.654,
+    "p95HttpMinusWebsocketMs": 99.53,
+    "pairs": [
+      {
+        "hash": "c20bcbfcec1f6eb75b4d2c9bc6bd49adab14b2c59b11fadc43d4aa185f92b629",
+        "slot": 462449762,
+        "websocketMs": 2503.904,
+        "httpMs": 2603.434,
+        "httpMinusWebsocketMs": 99.53
+      },
+      {
+        "hash": "76b4b302600d204260feabf08fa1eefae2058dcc1fa7d63c1ac03b6e81992543",
+        "slot": 462449774,
+        "websocketMs": 4858.452,
+        "httpMs": 4813.024,
+        "httpMinusWebsocketMs": -45.428
+      },
+      {
+        "hash": "fed5a86faec95c7b6377dcb85e251b23b4919905f719047aba476b5cd696f682",
+        "slot": 462449794,
+        "websocketMs": 9284.355,
+        "httpMs": 9227.49,
+        "httpMinusWebsocketMs": -56.865
+      },
+      {
+        "hash": "d3f753214b9a9f23fb735d069c9015a88ebef8cb52af5110affb9d07b8788557",
+        "slot": 462449805,
+        "websocketMs": 11418.169,
+        "httpMs": 11514.484,
+        "httpMinusWebsocketMs": 96.315
+      },
+      {
+        "hash": "bc634141e16ffdd9ad497276f00b2c546f8e1dc5b56cc39da4f684772a69aaa1",
+        "slot": 462449817,
+        "websocketMs": 13770.886,
+        "httpMs": 13728.232,
+        "httpMinusWebsocketMs": -42.654
+      }
+    ]
+  },
+  "lifecycle": [
+    {
+      "elapsedMs": 796,
+      "type": "connected",
+      "generation": 1
+    },
+    {
+      "elapsedMs": 1028,
+      "type": "subscribed",
+      "name": "account",
+      "generation": 1
+    },
+    {
+      "elapsedMs": 1029,
+      "type": "ready",
+      "generation": 1
+    },
+    {
+      "elapsedMs": 5008,
+      "type": "disconnected",
+      "code": 1006,
+      "generation": 1
+    },
+    {
+      "elapsedMs": 6988,
+      "type": "connected",
+      "generation": 2
+    },
+    {
+      "elapsedMs": 7200,
+      "type": "subscribed",
+      "name": "account",
+      "generation": 2
+    },
+    {
+      "elapsedMs": 7201,
+      "type": "ready",
+      "generation": 2
+    }
+  ],
+  "observations": [
+    {
+      "source": "http",
+      "ms": 331.539,
+      "slot": 462449752,
+      "hash": "b0476b286512663b1bf8a2cae440d00ff3b001b6f279389227cc64031b2809f5",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 1037.044,
+      "slot": 462449755,
+      "hash": "b021547e9d04c71ba19d921c777cfd3edcd83eef0bf1cf4a59eb9a4f62faef85",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 1303.782,
+      "slot": 462449756,
+      "hash": "453108a1643ada49019eabda83b86f7286a7c9dfb452b32a9f5aa75fcfe06e95",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 1377.372,
+      "slot": 462449757,
+      "hash": "6475a89a0049a711ce9d90098c9d0a7f2616a78384b01fc4f7345297d4f2156a",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 1571.171,
+      "slot": 462449758,
+      "hash": "93fa16982865393a0e48e5e079fb34e0ca5cce3247edf13dd45f6bc6071d67b8",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 2130.664,
+      "slot": 462449759,
+      "hash": "248561e98090dd5b1534dd3f2eb1c61278ff20e158bb63551bde4ae545cedd9f",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 2131.534,
+      "slot": 462449760,
+      "hash": "5dc9c304ba131b6c7613655293b2cb61be8d4fbe8610dd564bc2bd2f70ce0633",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 2202.987,
+      "slot": 462449761,
+      "hash": "af05c11e0aedbea9cb99aa64b91d75e136d0e6bd257aa8093932e13cbf62cbb6",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 2503.904,
+      "slot": 462449762,
+      "hash": "c20bcbfcec1f6eb75b4d2c9bc6bd49adab14b2c59b11fadc43d4aa185f92b629",
+      "lamports": 1169280
+    },
+    {
+      "source": "http",
+      "ms": 2603.434,
+      "slot": 462449762,
+      "hash": "c20bcbfcec1f6eb75b4d2c9bc6bd49adab14b2c59b11fadc43d4aa185f92b629",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 2721.501,
+      "slot": 462449763,
+      "hash": "8f7422e32a70964fdfc3ff7096251ce8c76a42ac3c532cc3a46a1742b2a80fa4",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 2834.148,
+      "slot": 462449764,
+      "hash": "2324013f529453ded57e0a34c71705c9fb4dbcaae4a9dd55faf7a281b2cd5f65",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 3123.453,
+      "slot": 462449765,
+      "hash": "aec8d246f7dece51d5a6cc296e84397c684c4781515f2f415a62d28d4a6b9b7f",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 3254.214,
+      "slot": 462449766,
+      "hash": "518cd04612a0d952fcec657f36cfbacea9037db5a336ea3fe1eee4da768fa358",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 3459.485,
+      "slot": 462449767,
+      "hash": "0e6dcb136e25cd2a60faf32cdb1fedf52d07dc828dcdc8478d52fb6dd99ae938",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 3655.161,
+      "slot": 462449768,
+      "hash": "7adcb41b94e10819b43d8b212cd793d881d96ceec491d238ed61c3383a347579",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 3912.319,
+      "slot": 462449769,
+      "hash": "b4b4fe8947a90465940a82a472f630d259316c54f2313b70c610d8e7d698d607",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 4173.796,
+      "slot": 462449770,
+      "hash": "191a0c1af41a3b452ad5c088398cb6ac84cade5b0e9a6d81a4758b7a0aa97b0a",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 4269.79,
+      "slot": 462449771,
+      "hash": "6c39690bf4499e58eee7d48ee6dbb88f3b908890098c18d260ac7258a838185a",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 4508.703,
+      "slot": 462449772,
+      "hash": "acad50cd0d4dced355969a227177edb6fdc7c5aee375f4f2e875e4cb99cca105",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 4697.826,
+      "slot": 462449773,
+      "hash": "dc556f4a3e330123b852b843a23b88f2cbbdde0c1bbcd9fbce84460f95a1095a",
+      "lamports": 1169280
+    },
+    {
+      "source": "http",
+      "ms": 4813.024,
+      "slot": 462449774,
+      "hash": "76b4b302600d204260feabf08fa1eefae2058dcc1fa7d63c1ac03b6e81992543",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 4858.452,
+      "slot": 462449774,
+      "hash": "76b4b302600d204260feabf08fa1eefae2058dcc1fa7d63c1ac03b6e81992543",
+      "lamports": 1169280
+    },
+    {
+      "source": "http",
+      "ms": 7023.036,
+      "slot": 462449783,
+      "hash": "88762a94677c4eee3cc508460694b49de2b61dcb0e1f442c345e9370a0987fe4",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 7418.262,
+      "slot": 462449784,
+      "hash": "03a5a73bd6ea8c744569d9266528ce751095ccbc05b583ba545e9c1595f967a9",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 7418.828,
+      "slot": 462449785,
+      "hash": "3006ca19b7587703d0c48f66210b35a2a016518665f2bc927007a73075fd7cd3",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 7646.389,
+      "slot": 462449786,
+      "hash": "814a3859c3885e3574cfd1f6a69e2f832ea6e492ee65c4d5fbcbf928c7d5f77e",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 7931.651,
+      "slot": 462449787,
+      "hash": "2830ecc707d2e56cc3b08c3f827adf045adf1b13ad5a9c452f3e638608a07a3e",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 8061.923,
+      "slot": 462449788,
+      "hash": "8d0006cf3ad139b7820b7a1707df47f54235f131eaa357dfb819e3e01615723c",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 8139.047,
+      "slot": 462449789,
+      "hash": "48743a74c6ea154724c6d33310a5d19fec006fa897b4573948df97f055a37b33",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 8488.253,
+      "slot": 462449790,
+      "hash": "78cc8d311204662d9cdd575be19195cd3f421fc6d730dcd852129acdee237d3d",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 8662.899,
+      "slot": 462449791,
+      "hash": "55a4cfb9a89c31a7b860673177844315fd969a25d14ba9af96c6646fdd2d9a35",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 8892.321,
+      "slot": 462449792,
+      "hash": "d6c260374109afb91e377e7dad1a36b2892d3565bc0212e6ddd5f587eac4b67d",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 8986.235,
+      "slot": 462449793,
+      "hash": "1f5709a58ba6844355d1391bcfb7374e540d07b4c40da64417988a7e0e97766f",
+      "lamports": 1169280
+    },
+    {
+      "source": "http",
+      "ms": 9227.49,
+      "slot": 462449794,
+      "hash": "fed5a86faec95c7b6377dcb85e251b23b4919905f719047aba476b5cd696f682",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 9284.355,
+      "slot": 462449794,
+      "hash": "fed5a86faec95c7b6377dcb85e251b23b4919905f719047aba476b5cd696f682",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 9681.694,
+      "slot": 462449795,
+      "hash": "8a162d7a5cdc931768f48ee01d1ee957c5a69f3c40c38ceaec70ec90a2bab610",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 9682.267,
+      "slot": 462449796,
+      "hash": "22f7406fddaa409d0b01357c38615d17f5b1de0ddc4149abfb22a2ad3a3c2450",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 9940.962,
+      "slot": 462449797,
+      "hash": "246a0d6b80ad2d7222d19efc681a1172f81b93bda1a8547a2f754b5820ad4dfc",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 9995.827,
+      "slot": 462449798,
+      "hash": "4ebb02405fd445847485e4d98f6a47313690fa47d53f18176daedc5900a95458",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 10236.122,
+      "slot": 462449799,
+      "hash": "61e0db813d1b9ba3f90bac79a6420dc2697fefec6f26a14a3240ee5d6127f83c",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 10464.185,
+      "slot": 462449800,
+      "hash": "bb403c033975e178ec330968e9449b9c9a98e1a0d61c10a269fb5d085efe3ba4",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 10605.088,
+      "slot": 462449801,
+      "hash": "7236674b8db882218921aad69abe49d69347949d83699dddd1054e46c26643ff",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 10992.354,
+      "slot": 462449802,
+      "hash": "5aecc5ba669192fa5756412b3a60228ad0118529a00593ae21fae3474385981b",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 11059.359,
+      "slot": 462449803,
+      "hash": "49b2d51b3c72ae12ae2070e186faed45b84ca1a6e71d81d09ff9126f7197cdeb",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 11191.269,
+      "slot": 462449804,
+      "hash": "a9be697ea596ab25edf5f4ae89edb461b753cbdd5b642dc2e4fa69592bfcb0d4",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 11418.169,
+      "slot": 462449805,
+      "hash": "d3f753214b9a9f23fb735d069c9015a88ebef8cb52af5110affb9d07b8788557",
+      "lamports": 1169280
+    },
+    {
+      "source": "http",
+      "ms": 11514.484,
+      "slot": 462449805,
+      "hash": "d3f753214b9a9f23fb735d069c9015a88ebef8cb52af5110affb9d07b8788557",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 11655.608,
+      "slot": 462449806,
+      "hash": "860a60157292f64a907ad6d5cdaaa07e4431a8eb49549dae04ccce146a327488",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 11915.685,
+      "slot": 462449807,
+      "hash": "947243cd007eacf205a106b5abacc4d159bfbd982780bb65a2826c39ab0acf1b",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 12119.285,
+      "slot": 462449808,
+      "hash": "2348a17f8d152d9c3c6cb91a1dcf3caad35500640cbbe6588034ed1c57d0e585",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 12201.466,
+      "slot": 462449809,
+      "hash": "d693e1f2533277013fe85abe527d76987c93f42cb9132dae92c37ccaec3d7138",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 12392.485,
+      "slot": 462449810,
+      "hash": "71ee3dbd23b559f13478744c4f1326970be22e5bf8fd5a8b045b260d7f4c7ca6",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 12611.3,
+      "slot": 462449811,
+      "hash": "694709a5e32f956120d02cc42a8684b3d8c4cfe06152736fc18510188a346374",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 12777.883,
+      "slot": 462449812,
+      "hash": "8e8cb9feff6725a1d806900e04b2a1d9dfc77bdd5e16cd2e2724d85a128d2898",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 13085.693,
+      "slot": 462449813,
+      "hash": "95db65b5dbc5f3ca71e5091126aecb7f62b49c2b1c5239a457fe7092cd26dfb5",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 13205.597,
+      "slot": 462449814,
+      "hash": "3db53fb8bed0f816cbb9e877b3ffac06dd35d1205c40b28c8e799781227e9190",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 13448.991,
+      "slot": 462449815,
+      "hash": "c86f71782caafbec0edb17b61aec591a3d843f4696b3358b57c96bd26c488276",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 13612.014,
+      "slot": 462449816,
+      "hash": "b595f24e535765c3196bd8226fb85b426ce5ccb17868ad577fd3c9750f22938a",
+      "lamports": 1169280
+    },
+    {
+      "source": "http",
+      "ms": 13728.232,
+      "slot": 462449817,
+      "hash": "bc634141e16ffdd9ad497276f00b2c546f8e1dc5b56cc39da4f684772a69aaa1",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 13770.886,
+      "slot": 462449817,
+      "hash": "bc634141e16ffdd9ad497276f00b2c546f8e1dc5b56cc39da4f684772a69aaa1",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 14133.697,
+      "slot": 462449818,
+      "hash": "c4339b698a565b447fcbd886d5c52ae28c0070e80aef2882c29c374549b26dcf",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 14297.698,
+      "slot": 462449819,
+      "hash": "c2135550435b83ee7dfd581f90e9fa6f80f9ddcb5e41219452fc94d58799e58a",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 14486.748,
+      "slot": 462449820,
+      "hash": "3464086a0b511961624c3c5222d0fb8ac6e6adcd3239de8fa8f358909568b078",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 14660.584,
+      "slot": 462449821,
+      "hash": "e3a870cf05f79ff224f09d2149cfd0469702cf4b719aa9b59ff9748aadbf61bf",
+      "lamports": 1169280
+    },
+    {
+      "source": "websocket",
+      "ms": 14823.547,
+      "slot": 462449822,
+      "hash": "d69b014e526ecb7036561f35097f32048ca282365b42d65938a0874e26fe45dd",
+      "lamports": 1169280
+    }
+  ],
+  "limits": "Single-account observation at confirmed commitment. Matched-state arrival difference is not transaction inclusion latency. Snapshots after reconnect do not replay intermediate states."
+}

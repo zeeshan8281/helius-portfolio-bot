@@ -1,0 +1,153 @@
+{
+  "schema": "helius-live-stream-swap-v1",
+  "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+  "state": "finalized-and-reconciled",
+  "receipt": {
+    "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+    "state": "finalized-and-reconciled",
+    "slot": 462451503,
+    "blockTime": 1793185215,
+    "usdcSpentBaseUnits": "1000000",
+    "solReceivedBeforeNetworkFeeLamports": "9729585",
+    "networkFeeLamports": 32094,
+    "beforeSolLamports": "3025003",
+    "afterSolLamports": "12722494",
+    "remainingUsdcBaseUnits": "2169640",
+    "minimumOutputLamports": "9678998",
+    "quoteOutputLamports": "9727636",
+    "explorer": "https://solscan.io/tx/46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD"
+  },
+  "pollIntervalMs": 2000,
+  "commitmentMatchedComparisons": [
+    {
+      "commitment": "confirmed",
+      "websocketObserved": true,
+      "httpObserved": false,
+      "httpMinusWebsocketMs": null
+    },
+    {
+      "commitment": "finalized",
+      "websocketObserved": true,
+      "httpObserved": true,
+      "httpMinusWebsocketMs": 1663.875
+    }
+  ],
+  "stream": {
+    "connections": 1,
+    "reconnects": 0,
+    "acknowledgements": 4,
+    "notifications": 4,
+    "bytes": 1258
+  },
+  "events": [
+    {
+      "at": "2026-10-28T11:00:08.730Z",
+      "type": "expired-unspent-archived",
+      "signature": "QNd1aULorFQ3gUR9Sn7pZFhn4Vj8xzn71QmQopjXCuo5FXmHLhSttVJtcWsLrzz8weoeBfM4vdKQJNbap5F6pcG"
+    },
+    {
+      "at": "2026-10-28T11:00:10.201Z",
+      "type": "connected",
+      "generation": 1
+    },
+    {
+      "at": "2026-10-28T11:00:10.400Z",
+      "type": "subscribed",
+      "name": "signature-confirmed",
+      "generation": 1
+    },
+    {
+      "at": "2026-10-28T11:00:10.401Z",
+      "type": "subscribed",
+      "name": "signature-finalized",
+      "generation": 1
+    },
+    {
+      "at": "2026-10-28T11:00:10.401Z",
+      "type": "subscribed",
+      "name": "wallet-sol",
+      "generation": 1
+    },
+    {
+      "at": "2026-10-28T11:00:10.401Z",
+      "type": "subscribed",
+      "name": "wallet-usdc",
+      "generation": 1
+    },
+    {
+      "at": "2026-10-28T11:00:10.401Z",
+      "type": "ready",
+      "generation": 1
+    },
+    {
+      "at": "2026-10-28T11:00:10.502Z",
+      "type": "signed-and-persisted",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "inputUsdc": "1",
+      "minimumSolLamports": "9678998"
+    },
+    {
+      "at": "2026-10-28T11:00:10.589Z",
+      "type": "submitted",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "elapsedMs": 87.42237499999965
+    },
+    {
+      "at": "2026-10-28T11:00:10.785Z",
+      "type": "http-status",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "state": "unknown",
+      "elapsedMs": 283.126041,
+      "observedMs": 2509.4125
+    },
+    {
+      "at": "2026-10-28T11:00:13.212Z",
+      "type": "same-bytes-rebroadcast",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD"
+    },
+    {
+      "at": "2026-10-28T11:00:16.017Z",
+      "type": "websocket",
+      "name": "signature-confirmed",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "slot": 462451503,
+      "err": null,
+      "observedMs": 7741.780084
+    },
+    {
+      "at": "2026-10-28T11:00:16.018Z",
+      "type": "websocket",
+      "name": "wallet-sol",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "slot": 462451503,
+      "observedMs": 7742.37025
+    },
+    {
+      "at": "2026-10-28T11:00:16.018Z",
+      "type": "websocket",
+      "name": "wallet-usdc",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "slot": 462451503,
+      "observedMs": 7742.575959
+    },
+    {
+      "at": "2026-10-28T11:00:16.018Z",
+      "type": "websocket",
+      "name": "signature-finalized",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "slot": 462451503,
+      "err": null,
+      "observedMs": 7742.952084
+    },
+    {
+      "at": "2026-10-28T11:00:17.682Z",
+      "type": "http-status",
+      "signature": "46HMFNkNW5xUKVTAWyzaAu2FZjco4nNz4LQApc3N1VQM6sQADx3JF3arFCdHqH2KmDjbmxv34t7SqbZTQCB3LHUD",
+      "state": "finalized",
+      "slot": 462451503,
+      "elapsedMs": 7180.542791,
+      "observedMs": 9406.827459
+    }
+  ],
+  "limit": "One transaction observed on one client. Arrival differences are not chain execution speed or a general performance guarantee."
+}

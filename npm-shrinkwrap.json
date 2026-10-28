@@ -1,16 +1,17 @@
 {
   "name": "helius-portfolio-bot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "helius-portfolio-bot",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "license": "ISC",
       "dependencies": {
         "@solana/web3.js": "3.1.1",
-        "bs58": "6.0.0"
+        "bs58": "6.0.0",
+        "ws": "8.22.0"
       },
       "bin": {
         "helius-bot": "cli.mjs"
