@@ -1,13 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import os from 'node:os';
 import { pathToFileURL } from 'node:url';
 import { setTimeout as delay } from 'node:timers/promises';
 import { AddressLookupTableAccount, ComputeBudgetProgram, Keypair, PublicKey, TransactionInstruction, TransactionMessage, VersionedTransaction } from '@solana/web3.js';
 import bs58 from 'bs58';
 import { OWNER, USDC, SOL, INPUT, checkBuild, priorityFee, checkSimulation } from './policy.mjs';
 
-const dir = path.join(os.homedir(), '.local/share/helius-trading-bot');
+import { stateDir as dir } from './runtime.mjs';
 const attemptFile = path.join(dir, 'one-usdc-attempt.json');
 const configuration = () => JSON.parse(fs.readFileSync(path.join(dir, 'config.json'), 'utf8'));
 const owner = new PublicKey(OWNER);

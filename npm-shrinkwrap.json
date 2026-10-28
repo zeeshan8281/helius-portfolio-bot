@@ -1,16 +1,22 @@
 {
-  "name": "helius-portfolio-experiment",
-  "version": "1.0.0",
+  "name": "helius-portfolio-bot",
+  "version": "0.1.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
-      "name": "helius-portfolio-experiment",
-      "version": "1.0.0",
+      "name": "helius-portfolio-bot",
+      "version": "0.1.0",
       "license": "ISC",
       "dependencies": {
         "@solana/web3.js": "3.1.1",
         "bs58": "6.0.0"
+      },
+      "bin": {
+        "helius-bot": "cli.mjs"
+      },
+      "engines": {
+        "node": ">=24"
       }
     },
     "node_modules/@noble/curves": {

@@ -1,8 +1,7 @@
 {
-  "name": "helius-portfolio-experiment",
-  "version": "1.0.0",
+  "name": "helius-portfolio-bot",
+  "version": "0.1.0",
   "type": "module",
-  "private": true,
   "scripts": {
     "test": "node --test",
     "balances": "node bot.mjs balances",
@@ -13,10 +12,17 @@
     "portfolio:prepare": "node portfolio-prepare.mjs",
     "portfolio:execute": "node portfolio-run.mjs execute",
     "portfolio:recover": "node portfolio-run.mjs recover",
-    "portfolio:monitor": "node portfolio-monitor.mjs"
+    "portfolio:monitor": "node portfolio-monitor.mjs",
+    "prepack": "node --test"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "solana",
+    "helius",
+    "jupiter",
+    "cli",
+    "portfolio"
+  ],
+  "author": "Zeeshan",
   "license": "ISC",
   "description": "A small, evidence-driven Solana portfolio experiment using Helius RPC and Jupiter Swap V2",
   "dependencies": {
@@ -25,5 +31,38 @@
   },
   "engines": {
     "node": ">=24"
+  },
+  "bin": {
+    "helius-bot": "cli.mjs"
+  },
+  "files": [
+    "bot.mjs",
+    "cli.mjs",
+    "policy.mjs",
+    "portfolio-accounting.mjs",
+    "portfolio-jupiter-decode.mjs",
+    "portfolio-mark.mjs",
+    "portfolio-monitor.mjs",
+    "portfolio-observe.mjs",
+    "portfolio-policy.mjs",
+    "portfolio-prepare.mjs",
+    "portfolio-run.mjs",
+    "runtime.mjs",
+    "assets.json",
+    "docs/",
+    "evidence/",
+    "LICENSE",
+    "npm-shrinkwrap.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeeshan8281/helius-portfolio-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zeeshan8281/helius-portfolio-bot/issues"
+  },
+  "homepage": "https://github.com/zeeshan8281/helius-portfolio-bot#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }

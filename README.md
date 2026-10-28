@@ -1,4 +1,4 @@
-# A tiny Solana portfolio experiment with Helius
+# Helius portfolio bot
 
 A mainnet experiment targeting a 5-10% portfolio return across native SOL, Wormhole WETH, Sunrise HYPE, and OmniBridge ZEC. Jupiter Swap V2 supplies swap instructions; Helius supplies account data, blockhashes, simulation, priority-fee estimates, submission, and finalized settlement reads. The target is an experiment, not a promised result or a proven trading edge.
 
@@ -8,9 +8,70 @@ The proposed allocation keeps the existing SOL exposure and buys 0.65 USDC each 
 
 Read [the detailed experiment walkthrough](docs/experiment.md) for the code path, diagrams, and all entry and exit receipts.
 
-## Runtime and commands
+## Install and set up
 
-Use Node.js 24 or newer. Dependencies are pinned in package-lock.json.
+Requires Node.js 24 or newer. Install the package from GitHub:
+
+```sh
+npm install -g github:zeeshan8281/helius-portfolio-bot
+helius-bot init
+helius-bot doctor
+helius-bot balances
+```
+
+`init` privately prompts for your Helius API key and a wallet address. Enter an address for watch-only mode, or leave the address blank to generate a new dedicated local wallet. It prints the public address, never the secret key. Setup writes private files to `~/.local/share/helius-portfolio-bot/` and never opens a trade. Back up a generated key privately before funding that wallet.
+
+For non-interactive setup, supply `HELIUS_API_KEY` in the environment and use `helius-bot init --wallet YOUR_PUBLIC_ADDRESS` or `helius-bot init --generate-wallet`. `JUPITER_API_KEY` is optional. Do not put secrets in command-line arguments, Git, or bug reports. Every command supports `--home DIRECTORY` for an independent setup. Init refuses to overwrite an existing directory.
+
+```sh
+helius-bot mark
+helius-bot prepare ETH
+helius-bot status
+helius-bot --help
+```
+
+These inspect, quote, or simulate. They do not sign. Watch-only mode refuses trading and authorization.
+
+## Explicit live run
+
+A local signing wallet needs USDC for entries and SOL for fees, gas reserve, and account deposits. The allocation stays fixed at 0.65 USDC each for ETH, HYPE, and ZEC (1.95 USDC lifetime total), retaining existing native SOL. A fresh quote can reject an uneconomic or unsupported route. Identity checks may reject a changed token authority.
+
+After funding your own dedicated wallet, create a baseline and explicitly authorize one run:
+
+```sh
+helius-bot baseline
+helius-bot authorize --live --minutes 30 --max-loss-percent 10 --target-percent 5
+helius-bot trade ETH --live
+helius-bot trade HYPE --live
+helius-bot trade ZEC --live
+helius-bot monitor --live
+```
+
+These are real mainnet commands. Authorization starts the clock immediately, but starts no background process and submits no trades. Run the monitor after the desired entries and keep the computer awake and online. The package has no price-prediction model; neither the target nor a loss cap is guaranteed. The original experiment lost about 0.97%.
+
+Authorization accepts 1-1440 minutes, a positive loss trigger up to 10%, and a target of 5-10%. It requires a complete positive baseline from the last 60 seconds and verifies the current wallet still matches it. If the unapproved baseline gets stale, `helius-bot baseline --refresh` archives it and creates a fresh one. Once authorization, a journal, or a stop exists, the baseline cannot be refreshed and the run cannot be reset by this CLI. Never delete these files to repeat a trade.
+
+`helius-bot stop` latches a stop without submitting anything. Use `helius-bot monitor --live` to close positions under that approved run, or `helius-bot exit ETH --live` for a particular full exit. `helius-bot recover` observes an unresolved original signature. `helius-bot status` prints a summary without signed transaction bytes. Killing the monitor stops monitoring; it does not close positions. A crash can leave a lock requiring investigation.
+
+The CLI uses a separate directory from the historical research scripts. Installing it does not read the old signing key, reset the completed experiment, or authorize trading with the article's wallet.
+
+## Package and development
+
+The release uses `npm-shrinkwrap.json` to pin its dependency tree. It has no install or postinstall scripts. The package manifest explicitly includes runtime modules, asset metadata, docs, public receipts, and the license; local configuration, private keys, signed journals, and dependencies are excluded.
+
+```sh
+npm ci
+npm test
+npm pack
+npm install -g ./helius-portfolio-bot-0.1.0.tgz
+helius-bot --version
+```
+
+Registry publication is separate from building a package. Until the package is published to npm, use the GitHub installation above or the actual release archive. Do not assume `npx helius-portfolio-bot` resolves to this project.
+
+## Historical research commands
+
+Use Node.js 24 or newer. Dependencies are pinned in npm-shrinkwrap.json.
 
 ```sh
 npm ci
@@ -62,4 +123,4 @@ See the separate public receipt and article draft. No keys, API credentials, sig
 
 The monitor recorded closure at 2026-10-28T06:57:38.638Z, before the revised 06:57:43Z deadline. Seven real transactions were independently re-fetched at finalized commitment. End balances were 3.169640 USDC and 0.003025003 native SOL, plus the unchanged USDC-account deposit. The post-close bid mark was 3.629242 USDC against 3.664699 at the original baseline: a marked loss of 0.035457 USDC, approximately 0.97%. Residual SOL and account deposits still use quote values. Trading has stopped; the authorization expired and the persistent stop blocks reentry.
 
-This repository is a record of a closed experiment. It contains no private wallet key, API configuration, signed journal, or reusable trading authorization. Clone it to inspect the implementation and run the tests; the article is not a deposit or trading instruction.
+This repository includes the record of a closed experiment. It contains no private wallet key, API configuration, signed journal, or reusable trading authorization. The CLI requires each user to set up their own wallet and explicitly approve their own limits.

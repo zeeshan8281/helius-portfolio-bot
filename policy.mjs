@@ -1,4 +1,4 @@
-export const OWNER = '5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE';
+export { OWNER } from './runtime.mjs';
 export const USDC = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
 export const SOL = 'So11111111111111111111111111111111111111112';
 export const INPUT = 1_000_000n;

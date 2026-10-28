@@ -11,3 +11,4 @@ portfolio-journal.json
 portfolio-stop.json
 portfolio-monitor-status.json
 *.lock
+*.tgz
