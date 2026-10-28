@@ -1,6 +1,6 @@
 # Live experiment status
 
-The user approved a 10% loss trigger or 24-hour limit. The immutable experiment baseline was recorded at2026-10-28T06:10:29.672Z: a quote mark of3.664699USDC including native SOL and token-account deposits. It is not the historical original-funding price or a realized cash amount. Entry permission expires2026-10-29T06:10:29.687Z; protective exits remain allowed afterward.
+The user first approved a10%loss trigger or24-hour limit, then shortened the experiment to30minutes with a10%profit target and10%loss trigger. The immutable experiment baseline was recorded at2026-10-28T06:10:29.672Z: a quote mark of3.664699USDC including native SOL and token-account deposits. It is not the historical original-funding price or a realized cash amount. The final requested result deadline is2026-10-28T06:57:43.000Z. The monitor starts closing at06:56:13.000Z, reserving90seconds for four swaps and settlement. Protective exits remain allowed afterward if network delays prevent timely completion. The original baseline and all entry receipts remain unchanged.
 
 Three real allocations finalized and reconciled against actual transaction metadata and finalized wallet accounts:
 
@@ -12,6 +12,6 @@ Three real allocations finalized and reconciled against actual transaction metad
 
 USDC remaining0.05; native SOL remaining0.010318753. Three new classic token accounts each hold0.001488440SOL deposits; these are separate from the fees. Closing each full token position was tested through a real unsigned simulation, including the exact deposit refund. The native SOL exit was also simulated, retaining its gas reserve. No actual sale has happened yet, so exit settlement and 5–10% profit remain unverified.
 
-The monitor uses current full-position quotes, an estimated exit-fee allowance, and whole-portfolio value to trigger exits at an estimated5% gain,10% loss, or the deadline. A persistent stop blocks all later entries. Per-asset protective exits do not require successful portfolio-wide valuation. Quote values, closed positions, realized sale proceeds and residual SOL value remain distinct.
+The monitor uses current full-position quotes, an estimated exit-fee allowance, and whole-portfolio value to trigger exits at an estimated10%gain,10%loss, or the shortened cutoff. A persistent stop blocks all later entries. Per-asset protective exits do not require successful portfolio-wide valuation. Quote values, closed positions, realized sale proceeds and residual SOL value remain distinct.
 
 Operational limits: the local process needs this computer and network to remain available. A10% trigger is not a guarantee of maximum loss. Quote outages, unexpected wallet activity, unknown tokens, stale locks or unreconciled transactions can require investigation. Live crash recovery and actual sale settlement have not yet been exercised. No GitHub push or profit article has been published.

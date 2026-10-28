@@ -28,6 +28,10 @@ export function restoredStop(prior, authorizationSha256) {
   if (prior?.authorizationSha256 !== authorizationSha256) return null;
   return prior.exitReason ?? null;
 }
+export function mayTryAnotherExit(journal, authorizationSha256) {
+  return journal?.owner === OWNER && journal.authorizationSha256 === authorizationSha256 && Array.isArray(journal.attempts) &&
+    journal.attempts.every(a => ['finalized-and-reconciled', 'expired-unspent'].includes(a.state));
+}
 export function monitorDecision(baseline, mark, authorization, nowMs) {
   if (mark.confidence !== 'quote-only' || mark.feeBudgetUsdcAtomic === null || mark.feeBudgetUsdcAtomic === undefined ||
       !Number.isSafeInteger(nowMs) || !Number.isSafeInteger(Date.parse(mark.observedAt)) ||
@@ -73,7 +77,7 @@ export async function monitor() {
     }
     persist('portfolio-stop.json', { authorizationSha256: authorizationHash, exitReason, latchedAt: new Date().toISOString() });
   };
-  for (;;) {
+  monitoring: for (;;) {
     try {
       if (createHash('sha256').update(fs.readFileSync(path.join(stateDir, 'portfolio-authorization.json'))).digest('hex') !== authorizationHash)
         throw Error('Authorization changed during monitoring');
@@ -87,10 +91,20 @@ export async function monitor() {
         const wallet = await snapshotWallet([], 'finalized');
         if (!sameWallet(wallet, expected)) throw Error('Wallet changed outside this run; protective exits require investigation');
         persist('portfolio-monitor-status.json', { checkedAt: new Date().toISOString(), pid: process.pid, authorizationSha256: authorizationHash, state: 'closing', exitReason });
-        const token = registry.assets.find(a => ['ETH', 'HYPE', 'ZEC'].includes(a.symbol) &&
+        const tokens = registry.assets.filter(a => ['ETH', 'HYPE', 'ZEC'].includes(a.symbol) &&
           Object.values(wallet.tokenAccounts).some(t => t?.mint === a.mint && t.amountAtomic > 0n));
-        if (token) { await command('execute', token.symbol, 'exit'); continue; }
-        if (wallet.nativeLamports > MIN_GAS_LAMPORTS + MAX_NETWORK_FEE_LAMPORTS) { await command('execute', 'SOL', 'exit-sol'); continue; }
+        const actions = tokens.map(a => [a.symbol, 'exit']);
+        if (wallet.nativeLamports > MIN_GAS_LAMPORTS + MAX_NETWORK_FEE_LAMPORTS) actions.push(['SOL', 'exit-sol']);
+        let lastError;
+        for (const [symbol, direction] of actions) {
+          try { await command('execute', symbol, direction); continue monitoring; }
+          catch (error) {
+            if (!mayTryAnotherExit(read('portfolio-journal.json'), authorizationHash)) throw error;
+            lastError = error;
+            console.error(json({ state: 'exit-preparation-rejected', symbol, message: error.message, tryingOtherAssets: true }));
+          }
+        }
+        if (lastError) throw lastError;
         const record = { state: 'positions-closed', exitReason, authorizationSha256: authorizationHash, wallet, completedAt: new Date().toISOString(), realizedReturn: null,
           limit: 'Finalized receipts establish sale quantities and fees. Residual SOL, gas and account deposits still need a quote value; closure alone does not establish a 5 percent realized return.' };
         try { record.finalMark = await markPortfolio(); } catch (error) { record.valuationError = error.message; }

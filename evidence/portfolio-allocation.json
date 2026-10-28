@@ -72,5 +72,34 @@
       "explorer": "https://solscan.io/tx/3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx"
     }
   ],
-  "finalReturn": null
+  "finalReturn": null,
+  "currentRisk": {
+    "targetBps": 1000,
+    "maxLossBps": 1000,
+    "liquidationStartsUTC": "2026-10-28T06:56:13.000Z",
+    "requestedResultDeadlineUTC": "2026-10-28T06:57:43.000Z",
+    "lossIsTriggerNotGuarantee": true
+  },
+  "authorizationAmendments": [
+    {
+      "fromSha256": "c298cff37f5cb1311565fba044e062f27894cce41cab36f41126316ad1657218",
+      "toSha256": "7be449037e6a7910087f3c26724c0c575fe7259bdeaf6fb7eded16a1406190f3",
+      "effectiveAt": "2026-10-28T06:28:43.044Z",
+      "targetBps": 1000,
+      "maxLossBps": 1000,
+      "authorizedUntilISO": "2026-10-28T06:57:43.000Z",
+      "baselineUnchanged": true
+    },
+    {
+      "fromSha256": "7be449037e6a7910087f3c26724c0c575fe7259bdeaf6fb7eded16a1406190f3",
+      "toSha256": "d4efb2be5dfbbffd3cf6c4e600a6072ec27cbfe0a50f2a243e00b8e987052e4c",
+      "effectiveAt": "2026-10-28T06:30:39.968Z",
+      "targetBps": 1000,
+      "maxLossBps": 1000,
+      "authorizedUntilISO": "2026-10-28T06:56:13.000Z",
+      "exitByISO": "2026-10-28T06:57:43.000Z",
+      "reason": "90-second liquidation/settlement buffer within the requested 30 minutes",
+      "baselineUnchanged": true
+    }
+  ]
 }

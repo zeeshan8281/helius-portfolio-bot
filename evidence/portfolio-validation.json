@@ -38,5 +38,15 @@
     "portfolio-policy.mjs": "60c40670a04256895ebe56e12307244df55a006658cb62b99f422737d340cbe1",
     "portfolio-prepare.mjs": "a23a8db78f282ba1c44dd8f45df80bfbee1e6d585f9c361d24cd738b5c4b4202",
     "portfolio-run.mjs": "d9f038f0704a65bab32bf2171f1c4f559678b7693d1b57610230acf0d723564b"
-  }
+  },
+  "followUpValidation": [
+    {
+      "asOf": "2026-10-28T06:44:44Z",
+      "unitTestsPassed": 54,
+      "failed": 0,
+      "change": "After a rejected exit preparation, try another asset only when all journaled intents remain safely resolved; unresolved or failed-on-chain attempts block continuation.",
+      "newMonitorSha256": "de24dfeb8ae593e290f7cd9d8855f37c0441b79935097ccb46a11c51c57e7113",
+      "liveFallbackEndToEnd": false
+    }
+  ]
 }
