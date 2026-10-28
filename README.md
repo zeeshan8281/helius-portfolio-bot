@@ -10,10 +10,10 @@ Read [the detailed experiment walkthrough](docs/experiment.md) for the code path
 
 ## Install and set up
 
-Requires Node.js 24 or newer. Install the package from GitHub:
+Requires Node.js 24 or newer. Install the tested npm archive from the GitHub release:
 
 ```sh
-npm install -g github:zeeshan8281/helius-portfolio-bot
+npm install -g https://github.com/zeeshan8281/helius-portfolio-bot/releases/download/v0.1.1/helius-portfolio-bot-0.1.1.tgz
 helius-bot init
 helius-bot doctor
 helius-bot balances
@@ -63,11 +63,11 @@ The release uses `npm-shrinkwrap.json` to pin its dependency tree. It has no ins
 npm ci
 npm test
 npm pack
-npm install -g ./helius-portfolio-bot-0.1.0.tgz
+npm install -g ./helius-portfolio-bot-0.1.1.tgz
 helius-bot --version
 ```
 
-Registry publication is separate from building a package. Until the package is published to npm, use the GitHub installation above or the actual release archive. Do not assume `npx helius-portfolio-bot` resolves to this project.
+Registry publication is separate from building a package. Until the package is published to npm, use the release archive above. A source install directly from a GitHub URL produced a broken temporary symlink in the tested npm environment; the release archive avoids that path. Do not assume `npx helius-portfolio-bot` resolves to this project.
 
 ## Historical research commands
 

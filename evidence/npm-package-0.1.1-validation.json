@@ -1,0 +1,106 @@
+{
+  "asOf": "2026-10-28T08:36:36.989259+00:00",
+  "package": "helius-portfolio-bot@0.1.1",
+  "unitTestsPassed": 60,
+  "unitTestsFailed": 0,
+  "archive": {
+    "files": 32,
+    "bytes": 180523,
+    "sha256": "5a92f23e7f7537cadc20147c160b49557a21242971eebf78dd84a129a858c318",
+    "configuredSecretsFound": 0,
+    "allPackedFilesMatchSource": true
+  },
+  "installedArchiveChecks": [
+    {
+      "check": "installed bin version",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "installed bin help",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "watch-only setup",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "real Helius doctor",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "real finalized balances before",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "real Helius plus Jupiter portfolio quote",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "watch-only entry preparation refuses insufficient gas",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "check": "watch-only live entry refused",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "check": "watch-only live monitor refused",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "check": "isolated local-wallet setup",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "check": "unapproved local trade refused before signing",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "check": "real zero-wallet baseline refused",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "check": "real finalized balances after",
+      "passed": true,
+      "exitCode": 0
+    }
+  ],
+  "realServices": [
+    "Helius Solana mainnet RPC",
+    "Jupiter Swap V2 build/quotes"
+  ],
+  "walletObserved": "5RnEnvCEAnE2HG32ewbJPTaGEjkDXqoZzGGvHxxgV1uE",
+  "finalizedBalanceUnchanged": true,
+  "protectedHistoricalStateUnchanged": true,
+  "liveTransactionsSubmitted": 0,
+  "liveAuthorizationsCreated": 0,
+  "quoteOnlyUsdcAtomic": "3635437",
+  "limits": [
+    "This package version was not used for a new signed swap; seven historical trades predate packaging.",
+    "Unsigned entry preparation was refused because the existing SOL balance cannot cover both setup rent and gas reserve.",
+    "Registry publication requires npm authentication.",
+    "Crash injection and bridge redemption remain untested."
+  ],
+  "dependencyAudit": {
+    "knownVulnerabilities": 0,
+    "lockedDependencyVersionsAndIntegrityUnchanged": 57
+  },
+  "interactivePrompt": {
+    "checkedWithRealPty": true,
+    "usedTestKeyOnly": true,
+    "inputEchoed": false
+  },
+  "installationCorrection": "A GitHub-source npm global install reported success but linked to a deleted temporary checkout in the tested npm environment. Release archive installation is the supported quick-start and passed real checks."
+}

@@ -6,6 +6,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { Keypair } from '@solana/web3.js';
+import manifest from './package.json' with { type: 'json' };
 
 const cli = fileURLToPath(new URL('./cli.mjs', import.meta.url));
 const wallet = '11111111111111111111111111111111';
@@ -27,7 +28,7 @@ function run(home, args, extraEnv = {}) {
 test('CLI help and version work before setup, and invalid arguments fail closed', t => {
   const home = sandbox(t);
   assert.match(run(home, ['--help']).stdout, /Setup never funds/);
-  assert.equal(run(home, ['--version']).stdout.trim(), '0.1.0');
+  assert.equal(run(home, ['--version']).stdout.trim(), manifest.version);
   assert.equal(run(home, ['balances']).status, 1);
   assert.equal(run(home, ['made-up']).status, 1);
   assert.equal(run(home, ['init', '--wallet', wallet, '--generate-wallet']).status, 1);
@@ -41,7 +42,7 @@ test('the npm-style executable symlink runs the CLI entry point', t => {
   fs.symlinkSync(cli, bin);
   const r = spawnSync(process.execPath, [bin, '--version'], { encoding: 'utf8' });
   assert.equal(r.status, 0, r.stderr);
-  assert.equal(r.stdout.trim(), '0.1.0');
+  assert.equal(r.stdout.trim(), manifest.version);
 });
 
 test('watch-only init creates private config for the requested wallet, never a signer or run', t => {
