@@ -23,7 +23,7 @@
     "historicalFundingReturnKnown": false,
     "liveCrashInjectionTested": false,
     "bridgeRedemptionTested": false,
-    "remotePushOrPublication": false
+    "remotePushOrPublication": true
   },
   "historicalValidation": {
     "asOf": "2026-10-28T06:22:02.244Z",
@@ -94,5 +94,17 @@
     "entryRefusedBeforeSigning": "Explicit unexpired authorization time required",
     "monitorRestart": "previously-closed",
     "monitorRestartCausedTrade": false
+  },
+  "publication": {
+    "authorizedChange": "User approved public code and an honest unpublished Hashnode draft after disclosure of the loss",
+    "githubRepository": "https://github.com/zeeshan8281/helius-portfolio-bot",
+    "verifiedRemoteCommit": "9989f86c654ed4487f8e7a29d0d2154f7cfe0461",
+    "public": true,
+    "hashnodeDraft": "https://hashnode.com/draft/6ae1a13b54a2e60216c9d428",
+    "hashnodeState": "Saved and reopened from Drafts 1. Fresh reader preview confirms unpublished state, all 14 anchor targets, 2 loaded figures, 7 transaction links, and 5 code blocks.",
+    "tradingRestarted": false,
+    "tocClickTestsPassed": 14,
+    "previewReloadLimit": "Reader preview is opened through the editor and receives draft content. Reloading that transient preview URL alone can show Draft Not Found; the editor draft URL was reopened successfully from saved drafts.",
+    "publicArticlePublished": false
   }
 }

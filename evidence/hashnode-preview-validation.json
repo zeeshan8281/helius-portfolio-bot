@@ -1,0 +1,190 @@
+{
+  "savedEditorDraft": "https://hashnode.com/draft/6ae1a13b54a2e60216c9d428",
+  "persistedContentReopened": true,
+  "preview": {
+    "codeBlocks": 5,
+    "draft": true,
+    "images": [
+      {
+        "complete": true,
+        "height": 780,
+        "src": "https://raw.githubusercontent.com/zeeshan8281/helius-portfolio-bot/main/docs/images/portfolio-accounting.png",
+        "width": 1440
+      },
+      {
+        "complete": true,
+        "height": 850,
+        "src": "https://raw.githubusercontent.com/zeeshan8281/helius-portfolio-bot/main/docs/images/portfolio-quote-samples.png",
+        "width": 1440
+      }
+    ],
+    "receiptLinks": [
+      "https://solscan.io/tx/4qVmJR5nBwL5bQvQR4NyvKiTp9hNQS27kmDqHy1DskVkiGC37gVPyVRbJRKwP3PLH4r6LGNzFbfsSv2i4tkCresC",
+      "https://solscan.io/tx/3dSgvmYp3JDm8UtGDibf1BR5ubj6hQSP1iW67qsD8eGKKHZu72CSjAW3BztQUUyzfNKyJ6jqZg8zPRbF31aCqZfP",
+      "https://solscan.io/tx/3aiKZBJuzAmpgdZxt25HQBtDe1Ee3aT7zw5HtcegX7WCuD3hJmWJ4ZE7Da6E63hQMQm7gZxf41rQ7whsYiC5NpKx",
+      "https://solscan.io/tx/MxgqU7R41zsN1F9CnjduBeuydJquoSAZWwfn1bPM94kbWg9iJZhdQBKZby5mcYpQ8iCXLuc1mVp8GMXpAJG4w3r",
+      "https://solscan.io/tx/4bavBFjsqtLsUwdMeKBZrtmuxeFQuSW7c8nsyeyjerZrR9oLH3CX5useVm7cu69jEmXT6FBY6AdpXffgY7PbQ9G7",
+      "https://solscan.io/tx/4hcrpZXvoJxZWJ6FAGiptJKNRbNF1x8kVUBdw2f95STS9eEUx8uCsQCDmFvEpL6knAJAHUSFv2QVXesuRPK2MBMh",
+      "https://solscan.io/tx/3W8dWdLvzzsKy97SAtX3Gj1d78VSnj4FWcEXECmRkfHnrMDY62voLaB3oEfJ2jbwqEoi8tokP6JvDRtCWXy7MGe9"
+    ],
+    "toc": [
+      {
+        "id": "helius-role",
+        "target": true,
+        "text": "What Helius does in this bot"
+      },
+      {
+        "id": "strategy",
+        "target": true,
+        "text": "What is the strategy?"
+      },
+      {
+        "id": "asset-identity",
+        "target": true,
+        "text": "First, identify what the wallet is buying"
+      },
+      {
+        "id": "read-only-start",
+        "target": true,
+        "text": "Run the read-only commands first"
+      },
+      {
+        "id": "one-purchase",
+        "target": true,
+        "text": "Follow one purchase"
+      },
+      {
+        "id": "instruction-bounds",
+        "target": true,
+        "text": "Read the instruction you are about to sign"
+      },
+      {
+        "id": "wallet-effects",
+        "target": true,
+        "text": "Simulate the wallet, including its SOL"
+      },
+      {
+        "id": "account-deposits",
+        "target": true,
+        "text": "Where did the account deposit go?"
+      },
+      {
+        "id": "durable-attempt",
+        "target": true,
+        "text": "Save the transaction before sending it"
+      },
+      {
+        "id": "portfolio-return",
+        "target": true,
+        "text": "Calculate the whole portfolio's return"
+      },
+      {
+        "id": "exit-monitor",
+        "target": true,
+        "text": "Make the deadline survive a broken quote"
+      },
+      {
+        "id": "real-validation",
+        "target": true,
+        "text": "What the real test has proved"
+      },
+      {
+        "id": "result",
+        "target": true,
+        "text": "The result"
+      },
+      {
+        "id": "agent",
+        "target": true,
+        "text": "Where an agent could fit"
+      }
+    ],
+    "url": "https://zeeshan8281.hashnode.dev/preview/6ae1a13b54a2e60216c9d428"
+  },
+  "clickTests": [
+    {
+      "id": "helius-role",
+      "hash": "#helius-role",
+      "targetTop": -0.1041666716337204,
+      "viewport": 1116
+    },
+    {
+      "id": "strategy",
+      "hash": "#strategy",
+      "targetTop": 0.0173611119389534,
+      "viewport": 1116
+    },
+    {
+      "id": "asset-identity",
+      "hash": "#asset-identity",
+      "targetTop": 0.0694444477558136,
+      "viewport": 1116
+    },
+    {
+      "id": "read-only-start",
+      "hash": "#read-only-start",
+      "targetTop": 0.3645833432674408,
+      "viewport": 1116
+    },
+    {
+      "id": "one-purchase",
+      "hash": "#one-purchase",
+      "targetTop": -0.5555555820465088,
+      "viewport": 1116
+    },
+    {
+      "id": "instruction-bounds",
+      "hash": "#instruction-bounds",
+      "targetTop": 0.2951388955116272,
+      "viewport": 1116
+    },
+    {
+      "id": "wallet-effects",
+      "hash": "#wallet-effects",
+      "targetTop": -0.2777777910232544,
+      "viewport": 1116
+    },
+    {
+      "id": "account-deposits",
+      "hash": "#account-deposits",
+      "targetTop": 0.15625,
+      "viewport": 1116
+    },
+    {
+      "id": "durable-attempt",
+      "hash": "#durable-attempt",
+      "targetTop": 0.190972238779068,
+      "viewport": 1116
+    },
+    {
+      "id": "portfolio-return",
+      "hash": "#portfolio-return",
+      "targetTop": -0.4687500298023224,
+      "viewport": 1116
+    },
+    {
+      "id": "exit-monitor",
+      "hash": "#exit-monitor",
+      "targetTop": 0.4340277910232544,
+      "viewport": 1116
+    },
+    {
+      "id": "real-validation",
+      "hash": "#real-validation",
+      "targetTop": -0.381944477558136,
+      "viewport": 1116
+    },
+    {
+      "id": "result",
+      "hash": "#result",
+      "targetTop": 0.3993055820465088,
+      "viewport": 1116
+    },
+    {
+      "id": "agent",
+      "hash": "#agent",
+      "targetTop": 564.1319580078125,
+      "viewport": 1116
+    }
+  ]
+}
